@@ -5,14 +5,8 @@ import { RiHome6Line } from "react-icons/ri";
 
 const Footer = () => {
   return (
-    <motion.footer
-      initial={{ opacity: 0, y: 75 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
-      className="bg-secondary-bg/70  w-full mt-32 lg:mt-44 "
-    >
-      <section>
+    <footer className=" mt-32 lg:mt-44 ">
+      <section className="bg-secondary-bg/70  w-full">
         <div
           style={{
             backgroundImage: `url(${waves})`,
@@ -25,7 +19,13 @@ const Footer = () => {
           className="relative w-fit "
         >
           <div className="w-full grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 gap-2 max-w-screen-xl container py-16">
-            <div className="bg-main-background col-span-2 mr-0 sm:mr-4 p-10 ">
+            <motion.div
+              initial={{ opacity: 0, y: 75 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="bg-main-background col-span-2 mr-0 sm:mr-4 p-10 "
+            >
               <h1 className="text-3xl lg:text-5xl font-gambetta italic text-accent-color  pb-44">
                 Before you go,
                 <br />
@@ -82,8 +82,13 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 75 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+            >
               <div className="bg-main-background mb-4 p-10 ">
                 <h1 className="text-3xl lg:text-4xl font-gambetta text-accent-color italic pb-8">
                   Let's work
@@ -126,7 +131,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="bg-main-background flex justify-center items-center w-full p-5">
             <p className="text-accent-color font-satoshi text-base  tracking-wide ">
@@ -136,7 +141,7 @@ const Footer = () => {
           </div>
         </div>
       </section>
-    </motion.footer>
+    </footer>
   );
 };
 
