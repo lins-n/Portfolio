@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import CTA from "./CTA";
 import Button from "./Button";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const Services = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 75 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
       id="services"
-      className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 gap-4 p-4 justify-center w-full"
+      className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 gap-4 p-6 justify-center  max-w-screen-2xl container"
     >
       <div className="bg-secondary-bg p-10 border border-accent-color/25  hover:border-accent-color/75 ease-in">
         <p className="font-satoshi text-accent-color">01</p>
@@ -44,7 +49,7 @@ const Services = () => {
         </p>
         <Button />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,17 +1,31 @@
 import React from "react";
 import MidHeader from "./MidHeader";
 import img6 from "./images/img6.jpg";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const UI = () => {
   return (
-    <main>
-      <MidHeader>
-        UI/UX{" "}
-        <span className=" font-gambetta italic text-accent-color">
-          Projects
-        </span>
-      </MidHeader>
-      <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 gap-4 p-4 justify-center w-full ">
+    <main className="max-w-screen-2xl container">
+      <motion.div
+        initial={{ opacity: 0, y: 75 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <MidHeader>
+          UI/UX{" "}
+          <span className=" font-gambetta italic text-accent-color">
+            Projects
+          </span>
+        </MidHeader>
+      </motion.div>
+      <motion.div
+        className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 gap-4 p-4 justify-center w-full "
+        initial={{ opacity: 0, y: 75 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <div
           style={{
             backgroundImage: `url(${img6})`,
@@ -89,7 +103,7 @@ const UI = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 };

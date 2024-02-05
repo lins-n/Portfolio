@@ -1,21 +1,32 @@
 import React from "react";
 import MidHeader from "./MidHeader";
 import astron from "./images/astron.png";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const Reviews = () => {
   return (
-    <div>
-      <MidHeader>
-        What{" "}
-        <span className="italic text-accent-color font-gambetta">Clients</span>{" "}
-        Say
-      </MidHeader>
+    <div className="max-w-screen-2xl container">
+      <motion.div>
+        <MidHeader>
+          What{" "}
+          <span className="italic text-accent-color font-gambetta">
+            Clients
+          </span>{" "}
+          Say
+        </MidHeader>
+      </motion.div>
       <div
         id="reviews"
         className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 gap-6 p-4 justify-center w-full max-w-screen-xl container"
       >
         <div>
-          <div className="bg-secondary-bg p-10 mb-6 border border-accent-color/25  hover:border-accent-color/75 ease-in">
+          <motion.div
+            initial={{ opacity: 0, y: 75 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="bg-secondary-bg p-10 mb-6 border border-accent-color/25  hover:border-accent-color/75 ease-in"
+          >
             <img src={astron} width={100} />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
@@ -37,8 +48,14 @@ const Reviews = () => {
                 CEO, Astron
               </p>
             </div>
-          </div>
-          <div className="bg-secondary-bg p-10 border border-accent-color/25  hover:border-accent-color/75 ease-in">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 75 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="bg-secondary-bg p-10 border border-accent-color/25  hover:border-accent-color/75 ease-in"
+          >
             <img src={astron} width={100} />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
@@ -60,10 +77,16 @@ const Reviews = () => {
                 CEO, Astron
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
         <div>
-          <div className="bg-secondary-bg p-10 border mb-6 border-accent-color/25  hover:border-accent-color/75 ease-in">
+          <motion.div
+            initial={{ opacity: 0, y: 75 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="bg-secondary-bg p-10 border mb-6 border-accent-color/25  hover:border-accent-color/75 ease-in"
+          >
             <img src={astron} width={100} />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
@@ -82,8 +105,14 @@ const Reviews = () => {
                 CEO, Astron
               </p>
             </div>
-          </div>
-          <div className="bg-secondary-bg p-10 border border-accent-color/25  hover:border-accent-color/75 ease-in">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 75 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="bg-secondary-bg p-10 border border-accent-color/25  hover:border-accent-color/75 ease-in"
+          >
             <img src={astron} width={100} />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
@@ -105,7 +134,7 @@ const Reviews = () => {
                 CEO, Astron
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

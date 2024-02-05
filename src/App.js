@@ -6,18 +6,19 @@ import SubHeader from "./SubHeader";
 import Designs from "./Designs";
 import UI from "./UI";
 import Reviews from "./Reviews";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="max-w-screen-2xl container flex flex-col justify-center mx-auto ">
+    <div>
       <Nav />
       <Header />
       <LogoSlider />
       <Services />
-      <SubHeader />
       <Designs />
       <UI />
       <Reviews />
+      <Footer />
     </div>
   );
 }
