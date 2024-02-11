@@ -16,14 +16,14 @@ const Services = () => {
       <div className="bg-secondary-bg p-10 border border-accent-color/25  hover:border-accent-color/75 ease-in">
         <p className="font-satoshi text-accent-color">01</p>
         <h1 className="text-xl font-satoshi uppercase tracking-widest text-accent-color font-bold">
-          UI/UX Design
+          Graphic Design
         </h1>
         <p className="font-satoshi tracking-wide py-4 text-lg leading-7 text-accent-color">
           I design beautiful user interfaces for mobile apps, websites, and
           more.I design beautiful user interfaces for mobile apps, websites, and
           more.
         </p>
-        <Button> Designer</Button>
+        <Button> projects</Button>
       </div>
       <div className="bg-secondary-bg p-10  border border-accent-color/25 hover:border-accent-color/75 ease-in">
         <p className="font-satoshi text-accent-color">01</p>
@@ -35,19 +35,19 @@ const Services = () => {
           more.I design beautiful user interfaces for mobile apps, websites, and
           more.
         </p>
-        <Button> Developer</Button>
+        <Button> projects</Button>
       </div>
       <div className="bg-secondary-bg p-10  border border-accent-color/25 hover:border-accent-color/75">
         <p className="font-satoshi text-accent-color">01</p>
         <h1 className="text-xl font-satoshi uppercase tracking-widest text-accent-color font-bold">
-          UI/UX Design
+          Development
         </h1>
         <p className="font-satoshi tracking-wide py-4 text-lg leading-7 text-accent-color">
           I design beautiful user interfaces for mobile apps, websites, and
           more.I design beautiful user interfaces for mobile apps, websites, and
           more.
         </p>
-        <Button />
+        <Button> Projects</Button>
       </div>
     </motion.div>
   );

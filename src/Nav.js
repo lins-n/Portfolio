@@ -7,25 +7,26 @@ import { BiMessageSquareDetail } from "react-icons/bi";
 import { MdOutlineDesignServices } from "react-icons/md";
 import "./css/nav.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [active, setActive] = useState("#");
   return (
     <nav>
-      <a
-        href="#"
+      <Link
+        to="/"
         onClick={() => setActive("#")}
         className={active === "#" ? "active" : ""}
       >
         <RiHome6Line />
-      </a>
-      <a
-        href="#about"
+      </Link>
+      <Link
+        to="/about"
         onClick={() => setActive("#about")}
         className={active === "#about" ? "active" : ""}
       >
         <AiOutlineUser />
-      </a>
+      </Link>
       <a
         href="#experience"
         onClick={() => setActive("#experience")}

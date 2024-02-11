@@ -1,24 +1,25 @@
 import React from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
-import waves from "./images/waves.png";
+import bgg from "./images/bgg.png";
 import { RiHome6Line } from "react-icons/ri";
 
 const Footer = () => {
   return (
     <footer className=" mt-32 lg:mt-44 ">
-      <section className="bg-secondary-bg/70  w-full">
-        <div
-          style={{
-            backgroundImage: `url(${waves})`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-
-            width: "100%",
-          }}
-          className="relative w-fit "
-        >
-          <div className="w-full grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 gap-2 max-w-screen-xl container py-16">
+      <section className=" bg-secondary-bg/30 w-full">
+        <div className="relative w-full overflow-hidden h-full ">
+          <img
+            src={bgg}
+            style={{
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              opacity: 0.5,
+              width: "100%",
+            }}
+            className="absolute h-full lg:h-fit "
+          />
+          <div className="w-full grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 gap-2 max-w-screen-xl container py-16 relative ">
             <motion.div
               initial={{ opacity: 0, y: 75 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -133,7 +134,7 @@ const Footer = () => {
               </div>
             </motion.div>
           </div>
-          <div className="bg-main-background flex justify-center items-center w-full p-5">
+          <div className="bg-main-background flex justify-center items-center w-full p-5 relative ">
             <p className="text-accent-color font-satoshi text-base  tracking-wide ">
               Designed by <span className="font-gambetta italic ">Collins</span>{" "}
               - 2024

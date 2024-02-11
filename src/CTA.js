@@ -1,7 +1,8 @@
 import React from "react";
 import { LuChevronDown } from "react-icons/lu";
 
-const CTA = () => {
+const CTA = (props) => {
+  const { children } = props;
   return (
     <div className="m-4 gap-4 flex  items-center">
       <a
@@ -11,7 +12,7 @@ const CTA = () => {
         <LuChevronDown size={18} />
       </a>
       <p className="text-base text-accent-color uppercase tracking-widest font-satoshi ">
-        My services
+        {children}
       </p>
     </div>
   );
