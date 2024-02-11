@@ -19,7 +19,7 @@ const Header = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className=" flex flex-col h-screen  w-full justify-center text-4xl lg:text-9xl md:text-6xl sm:text-6xl items-center p-4"
+        className=" flex flex-col h-screen  w-full justify-center text-4xl lg:text-8xl md:text-6xl sm:text-6xl items-center p-4"
       >
         <p className=" font-satoshi text-accent-color  text-center">
           Hi, I'm Collins
