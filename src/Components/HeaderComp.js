@@ -17,10 +17,10 @@ const HeaderComp = (props) => {
           {children}
         </p>
 
-        <p className="text-lg lg:text-lg md:text-base sm:text-base text-accent-color text-center leading-2 font-satoshi p-4">
+        {/* <p className="text-lg lg:text-lg md:text-base sm:text-base text-accent-color text-center leading-2 font-satoshi p-4">
           I enjoy making cool designs and building software.
-          {/* <br /> */}
-        </p>
+          
+        </p> */}
         <CTA>See Project</CTA>
       </motion.div>
     </header>

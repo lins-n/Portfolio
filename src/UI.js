@@ -2,6 +2,8 @@ import React from "react";
 import MidHeader from "./MidHeader";
 import img6 from "./images/img6.jpg";
 import { motion, useInView, useAnimation } from "framer-motion";
+import itFitss from "./images/itFitss.gif";
+import promo1 from "./images/promo1.gif";
 
 const UI = () => {
   return (
@@ -67,7 +69,7 @@ const UI = () => {
         </div>
         <div
           style={{
-            backgroundImage: `url(${img6})`,
+            backgroundImage: `url(${itFitss})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
@@ -77,7 +79,7 @@ const UI = () => {
         >
           <div className="bg-secondary-bg/30 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
             <p className="tracking-widest font-satoshi text-accent-color font-bold">
-              First
+              ITFITS APP
             </p>
             <p className="tracking-widest font-satoshi text-accent-color">
               UI DESIGN
@@ -86,7 +88,7 @@ const UI = () => {
         </div>
         <div
           style={{
-            backgroundImage: `url(${img6})`,
+            backgroundImage: `url(${promo1})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
@@ -96,7 +98,7 @@ const UI = () => {
         >
           <div className="bg-secondary-bg/30 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
             <p className="tracking-widest font-satoshi text-accent-color font-bold">
-              First
+              FINAL YEAR PROJECT
             </p>
             <p className="tracking-widest font-satoshi text-accent-color">
               UI DESIGN

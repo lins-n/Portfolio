@@ -29,7 +29,7 @@ const Designs = () => {
         <SubHeader />
       </motion.div>
       <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 gap-4 p-4 justify-center w-full ">
-        <Link to="/design">
+        <Link to="/design/siscode">
           <motion.div
             initial={{ opacity: 0, y: 75 }}
             whileInView={{ opacity: 1, y: 0 }}
