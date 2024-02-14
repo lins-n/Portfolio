@@ -3,6 +3,10 @@ import img6 from "./images/img6.jpg";
 import { motion, useInView, useAnimation } from "framer-motion";
 import SubHeader from "./SubHeader";
 import { Link } from "react-router-dom";
+import bitsy2 from "./images/bitsy2.png";
+import siscode2 from "./images/siscode2.png";
+import reps1 from "./images/reps1.png";
+import barron from "./images/barron.png";
 
 const Designs = () => {
   // const ref = useRef(null);
@@ -32,7 +36,7 @@ const Designs = () => {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
             style={{
-              backgroundImage: `url(${img6})`,
+              backgroundImage: `url(${siscode2})`,
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
               backgroundSize: "cover",
@@ -40,12 +44,12 @@ const Designs = () => {
             }}
             className="relative "
           >
-            <div className="bg-secondary-bg/30 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
-              <p className="tracking-widest font-satoshi text-accent-color font-bold">
-                First
+            <div className="bg-secondary-bg/50 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between items-center  m-6 p-4 s ">
+              <p className="tracking-widest font-satoshi uppercase text-accent-color font-bold">
+                Siscode Gh logo
               </p>
-              <p className="tracking-widest font-satoshi text-accent-color">
-                UI DESIGN
+              <p className="tracking-widest text-sm lg:text-base uppercase font-satoshi text-accent-color">
+                Graphic design
               </p>
             </div>
           </motion.div>
@@ -57,19 +61,19 @@ const Designs = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
           style={{
-            backgroundImage: `url(${img6})`,
+            backgroundImage: `url(${bitsy2})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
             height: 450,
           }}
-          className="relative"
+          className="relative "
         >
-          <div className="bg-secondary-bg/30 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
+          <div className="bg-secondary-bg/50 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between items-center  m-6 p-4 s ">
             <p className="tracking-widest font-satoshi text-accent-color font-bold">
-              First
+              BITSY APP
             </p>
-            <p className="tracking-widest font-satoshi text-accent-color">
+            <p className="tracking-widest text-sm lg:text-base font-satoshi text-accent-color">
               UI DESIGN
             </p>
           </div>
@@ -80,20 +84,20 @@ const Designs = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
           style={{
-            backgroundImage: `url(${img6})`,
+            backgroundImage: `url(${reps1})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
             height: 450,
           }}
-          className="relative"
+          className="relative "
         >
-          <div className="bg-secondary-bg/30 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
+          <div className="bg-secondary-bg/30 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between   items-center  m-6 p-4 s ">
             <p className="tracking-widest font-satoshi text-accent-color font-bold">
-              First
+              SPORTY REPS
             </p>
-            <p className="tracking-widest font-satoshi text-accent-color">
-              UI DESIGN
+            <p className="tracking-widest text-sm lg:text-base font-satoshi text-accent-color">
+              GRAPHIC DESIGN
             </p>
           </div>
         </motion.div>
@@ -103,20 +107,20 @@ const Designs = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
           style={{
-            backgroundImage: `url(${img6})`,
+            backgroundImage: `url(${barron})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
             height: 450,
           }}
-          className="relative"
+          className="relative "
         >
-          <div className="bg-secondary-bg/30 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
+          <div className="bg-secondary-bg/50 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between items-center m-6 p-4 s ">
             <p className="tracking-widest font-satoshi text-accent-color font-bold">
-              First
+              BARRON PROPERTY LOGO
             </p>
-            <p className="tracking-widest font-satoshi text-accent-color">
-              UI DESIGN
+            <p className="tracking-widest text-sm lg:text-base  font-satoshi text-accent-color">
+              GRAPHIC DESIGN
             </p>
           </div>
         </motion.div>

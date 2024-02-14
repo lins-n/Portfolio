@@ -19,9 +19,8 @@ const Services = () => {
           Graphic Design
         </h1>
         <p className="font-satoshi tracking-wide py-4 text-lg leading-7 text-accent-color">
-          I design beautiful user interfaces for mobile apps, websites, and
-          more.I design beautiful user interfaces for mobile apps, websites, and
-          more.
+          Elevate your brand with captivating visuals. As a graphic designer, I
+          specialize in crafting stunning logos, flyers, and more
         </p>
         <Button> projects</Button>
       </div>
@@ -31,9 +30,8 @@ const Services = () => {
           UI/UX Design
         </h1>
         <p className="font-satoshi tracking-wide py-4 text-lg leading-7 text-accent-color">
-          I design beautiful user interfaces for mobile apps, websites, and
-          more.I design beautiful user interfaces for mobile apps, websites, and
-          more.
+          I focus on crafting captivating interfaces for mobile apps, websites
+          and more.Transforming ideas into seamless user experiences.
         </p>
         <Button> projects</Button>
       </div>
@@ -43,9 +41,9 @@ const Services = () => {
           Development
         </h1>
         <p className="font-satoshi tracking-wide py-4 text-lg leading-7 text-accent-color">
-          I design beautiful user interfaces for mobile apps, websites, and
-          more.I design beautiful user interfaces for mobile apps, websites, and
-          more.
+          Crafting dynamic digital experiences through expert development.
+          Transforming ideas into innovative solutions that leave a lasting
+          impact.
         </p>
         <Button> Projects</Button>
       </div>
