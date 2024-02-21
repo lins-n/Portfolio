@@ -89,10 +89,10 @@ const Footer = () => {
                       <a href="design/siscode">Siscode</a>
                     </li>
                     <li className="text-accent-color font-satoshi text-lg hover:font-bold">
-                      <a href="/design/barron">Barron</a>
+                      <a href="design/baron">Barron</a>
                     </li>
                     <li className="text-accent-color font-satoshi text-lg hover:font-bold">
-                      <a href="/ui/trackwise">Trackwise</a>
+                      <a href="ui/trackwise">Trackwise</a>
                     </li>
                   </ul>
                 </div>
