@@ -6,13 +6,12 @@ const Button = (props) => {
   const { children } = props;
   return (
     <div className="gap-4 flex  items-center">
-      <a
-        href="#top"
+      <div
         className=" text-accent-color hover:bg-accent-color/25 bg-accent-color/5 rounded-full 
         p-1 border hover:rotate-45 transition duration-500 ease-in-out border-accent-color "
       >
         <GoArrowUpRight size={18} />
-      </a>
+      </div>
       <button className="text-base text-accent-color uppercase tracking-widest font-satoshi ">
         {children}
       </button>

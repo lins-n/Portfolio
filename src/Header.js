@@ -6,6 +6,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 const Header = () => {
   return (
     <header
+      id="main"
       className=""
       style={{
         backgroundImage: `url(${mockups})`,
@@ -31,7 +32,9 @@ const Header = () => {
           I enjoy making cool designs and building software.
           {/* <br /> */}
         </p>
-        <CTA>Services</CTA>
+        <a href="#services">
+          <CTA>Services</CTA>
+        </a>
       </motion.div>
     </header>
   );

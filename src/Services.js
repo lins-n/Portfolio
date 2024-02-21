@@ -22,10 +22,12 @@ const Services = () => {
           Elevate your brand with captivating visuals. As a graphic designer, I
           specialize in crafting stunning logos, flyers, and more
         </p>
-        <Button> projects</Button>
+        <a>
+          <Button> projects</Button>
+        </a>
       </div>
       <div className="bg-secondary-bg p-10  border border-accent-color/25 hover:border-accent-color/75 ease-in">
-        <p className="font-satoshi text-accent-color">01</p>
+        <p className="font-satoshi text-accent-color">02</p>
         <h1 className="text-xl font-satoshi uppercase tracking-widest text-accent-color font-bold">
           UI/UX Design
         </h1>
@@ -33,10 +35,12 @@ const Services = () => {
           I focus on crafting captivating interfaces for mobile apps, websites
           and more.Transforming ideas into seamless user experiences.
         </p>
-        <Button> projects</Button>
+        <a href="#ui" className="transition duration-800 ease-in-out">
+          <Button> projects</Button>
+        </a>
       </div>
       <div className="bg-secondary-bg p-10  border border-accent-color/25 hover:border-accent-color/75">
-        <p className="font-satoshi text-accent-color">01</p>
+        <p className="font-satoshi text-accent-color">03</p>
         <h1 className="text-xl font-satoshi uppercase tracking-widest text-accent-color font-bold">
           Development
         </h1>
@@ -45,7 +49,9 @@ const Services = () => {
           Transforming ideas into innovative solutions that leave a lasting
           impact.
         </p>
-        <Button> Projects</Button>
+        <a>
+          <Button> Projects</Button>
+        </a>
       </div>
     </motion.div>
   );

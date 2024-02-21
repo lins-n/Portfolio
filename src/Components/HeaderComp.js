@@ -21,7 +21,7 @@ const HeaderComp = (props) => {
           I enjoy making cool designs and building software.
           
         </p> */}
-        <CTA>See Project</CTA>
+        {/* <CTA>See Project</CTA> */}
       </motion.div>
     </header>
   );

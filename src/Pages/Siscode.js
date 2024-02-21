@@ -6,7 +6,7 @@ import mainD from "../images/Main - dark.jpg";
 import mock3 from "../images/mock3.jpg";
 import mock1 from "../images/mock1.jpg";
 import img6 from "../images/img6.jpg";
-import siscode from "../images/siscode.png";
+import siscode from "../images/siscode1.jpg";
 const Siscode = () => {
   return (
     <div>
