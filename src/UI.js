@@ -87,7 +87,7 @@ const UI = () => {
             }}
             className="relative"
           >
-            <div className="bg-secondary-bg/30 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
+            <div className="bg-secondary-bg/60 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
               <p className="tracking-widest font-satoshi text-accent-color font-bold">
                 ITFITS APP
               </p>
@@ -108,7 +108,7 @@ const UI = () => {
             }}
             className="relative"
           >
-            <div className="bg-secondary-bg/30 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
+            <div className="bg-secondary-bg/60 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
               <p className="tracking-widest font-satoshi text-accent-color font-bold">
                 FINAL YEAR PROJECT
               </p>

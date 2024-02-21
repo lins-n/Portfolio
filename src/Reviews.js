@@ -40,23 +40,19 @@ const Reviews = () => {
             <img src={astron} width={100} />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
-                Professional, Collaborative Web Design Experience with Collins.
+                logo design with COllins
               </h1>
               <p className="font-satoshi tracking-wide py-4 text-base leading-5 text-accent-color">
-                I had the pleasure of working with Arik on a website development
-                project and was blown away by his expertise and professionalism.
-                He made the process seamless and delivered a website that
-                exceeded our expectations. I highly recommend Arik for all your
-                web development needs.
+                The design is not only visually stunning but also communicates
+                the essence of my business effortlessly. Thank you for your
+                outstanding work.
               </p>
             </div>
             <div>
               <h1 className=" font-satoshi uppercase tracking-wide font-bold text-accent-color text-sm">
-                Peter Crabbe
+                Astron
               </h1>
-              <p className=" font-satoshi text-accent-color text-xs">
-                CEO, Astron
-              </p>
+              <p className=" font-satoshi text-accent-color text-xs">CEO</p>
             </div>
           </motion.div>
           <motion.div
@@ -69,22 +65,22 @@ const Reviews = () => {
             <img src={img10} width={100} />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
-                Professional, Collaborative Web Design Experience with Collins.
+                Professional, Collaborative Experience with Collins.
               </h1>
               <p className="font-satoshi tracking-wide py-4 text-base leading-5 text-accent-color">
-                I had the pleasure of working with Arik on a website development
-                project and was blown away by his expertise and professionalism.
-                He made the process seamless and delivered a website that
-                exceeded our expectations. I highly recommend Arik for all your
-                web development needs.
+                I had the pleasure of working with Collins on the logo project
+                and was blown away by his expertise and professionalism. He made
+                the process seamless and delivered a logo that exceeded our
+                expectations. I highly recommend Collins for all your design
+                needs.
               </p>
             </div>
             <div>
               <h1 className=" font-satoshi uppercase tracking-wide font-bold text-accent-color text-sm">
-                Peter Crabbe
+                Carl
               </h1>
               <p className=" font-satoshi text-accent-color text-xs">
-                CEO, Astron
+                CEO, Siscode
               </p>
             </div>
           </motion.div>
@@ -100,20 +96,19 @@ const Reviews = () => {
             <img src={img13} width={100} />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
-                Professional, Collaborative Web Design Experience with Collins.
+                Collins DID A GREAT JOB.
               </h1>
               <p className="font-satoshi tracking-wide py-4 text-base leading-5 text-accent-color">
-                I had the pleasure of working with Arik on a website development
-                project and was blown away by his expertise and professionalism.
+                From the initial concepts to the final product, you exceeded my
+                expectations at every step. Thank you for creating a logo that
+                I'm proud to display everywhere
               </p>
             </div>
             <div>
               <h1 className=" font-satoshi uppercase tracking-wide font-bold text-accent-color text-sm">
-                Peter Crabbe
+                ELIZABETH
               </h1>
-              <p className=" font-satoshi text-accent-color text-xs">
-                CEO, Astron
-              </p>
+              <p className=" font-satoshi text-accent-color text-xs">CEO</p>
             </div>
           </motion.div>
           <motion.div
@@ -126,23 +121,21 @@ const Reviews = () => {
             <img src={img14} width={100} />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
-                Professional, Collaborative Web Design Experience with Collins.
+                PLEASANT EXPERIENCE.
               </h1>
               <p className="font-satoshi tracking-wide py-4 text-base leading-5 text-accent-color">
-                I had the pleasure of working with Arik on a website development
-                project and was blown away by his expertise and professionalism.
-                He made the process seamless and delivered a website that
-                exceeded our expectations. I highly recommend Arik for all your
-                web development needs.
+                I'm absolutely thrilled with my new logo! It's like you read my
+                mind and brought my vision to life. The design perfectly
+                captures the essence of my brand, and I couldn't be happier with
+                the result. It's simple yet impactful, exactly what I was
+                looking for.
               </p>
             </div>
             <div>
               <h1 className=" font-satoshi uppercase tracking-wide font-bold text-accent-color text-sm">
-                Peter Crabbe
+                STUDIO 37
               </h1>
-              <p className=" font-satoshi text-accent-color text-xs">
-                CEO, Astron
-              </p>
+              <p className=" font-satoshi text-accent-color text-xs">CEO</p>
             </div>
           </motion.div>
         </div>
