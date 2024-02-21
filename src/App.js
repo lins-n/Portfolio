@@ -10,10 +10,12 @@ import Trackwise from "./Pages/Trackwise";
 import ItFits from "./Pages/ItFits";
 import Rendells from "./Pages/Rendells";
 import Baron from "./Pages/Baron";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div>
         <Nav />
         <Routes>

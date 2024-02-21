@@ -11,7 +11,7 @@ const Reviews = () => {
     <div className="max-w-screen-2xl container">
       <motion.div>
         <MidHeader>
-          <p className=" font-satoshi text-accent-color text-base tracking-widest my-6 uppercase text-center ">
+          <p className=" font-satoshi text-accent-color text-base tracking-widest my-1 md:my-6 uppercase text-center ">
             reviews
           </p>
           What{" "}
