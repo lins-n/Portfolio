@@ -101,7 +101,6 @@ const Siscode = () => {
               backgroundSize: "cover",
               height: 450,
             }}
-            className=" bg-secondary-bg/70 "
           >
             <img src={mock1} className=" object-cover " alt="siscode design4" />
           </div>
