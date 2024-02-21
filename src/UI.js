@@ -1,9 +1,7 @@
 import React from "react";
 import MidHeader from "./MidHeader";
-import img6 from "./images/img6.jpg";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import itFitss from "./images/itFitss.gif";
-import promo1 from "./images/promo1.gif";
 import bits from "./images/bits.jpg";
 import rendell from "./images/Rendell.jpg";
 import { Link } from "react-router-dom";

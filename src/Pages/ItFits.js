@@ -80,12 +80,20 @@ const ItFits = () => {
               <img src={img19} className=" object-cover " />
             </div>
             <div className=" bg-secondary-bg/70  ">
-              <img src={shoe1} className=" object-cover " />
+              <img
+                src={shoe1}
+                className=" object-cover "
+                alt="itfits design1"
+              />
             </div>
           </div>
           <div>
             <div className=" bg-secondary-bg/70  pb-4">
-              <img src={shoe2} className=" object-cover " />
+              <img
+                src={shoe2}
+                className=" object-cover "
+                alt="itfits design2"
+              />
             </div>
             <div className=" bg-secondary-bg/70 ">
               <video controls autostart autoPlay src={Video} type="video/mp4" />

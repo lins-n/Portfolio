@@ -3,7 +3,6 @@ import HeaderComp from "../Components/HeaderComp";
 import Footer from "../Footer";
 import reps1 from "../images/reps1.jpg";
 import rep2 from "../images/rep2.jpg";
-import rep3 from "../images/rep3.jpg";
 import rep4 from "../images/rep4.jpg";
 import rep5 from "../images/rep5.jpg";
 const Sporty = () => {
@@ -80,13 +79,13 @@ const Sporty = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4  container ">
           <div className=" bg-secondary-bg/70 ">
-            <img src={rep2} className=" object-cover " />
+            <img src={rep2} className=" object-cover " alt="sporty design1" />
           </div>
           <div className=" bg-secondary-bg/70 ">
-            <img src={rep4} className=" object-cover " />
+            <img src={rep4} className=" object-cover " alt="sporty design2" />
           </div>
           <div className=" bg-secondary-bg/70  col-span-2">
-            <img src={rep5} className=" object-cover " />
+            <img src={rep5} className=" object-cover " alt="sporty design3" />
           </div>
         </div>
       </main>

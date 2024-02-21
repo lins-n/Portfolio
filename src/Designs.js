@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import img6 from "./images/img6.jpg";
-import { motion, useInView, useAnimation } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import SubHeader from "./SubHeader";
 import { Link } from "react-router-dom";
 import bits from "./images/bits.jpg";

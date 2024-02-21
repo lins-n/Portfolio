@@ -5,7 +5,6 @@ import design from "../images/Design.jpg";
 import mainD from "../images/Main - dark.jpg";
 import mock3 from "../images/mock3.jpg";
 import mock1 from "../images/mock1.jpg";
-import img6 from "../images/img6.jpg";
 import siscode from "../images/siscode1.jpg";
 const Siscode = () => {
   return (
@@ -83,13 +82,17 @@ const Siscode = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4  mb-32 container ">
           <div className=" bg-secondary-bg/70 ">
-            <img src={design} className=" object-cover " />
+            <img
+              src={design}
+              className=" object-cover "
+              alt="siscode design1"
+            />
           </div>
           <div className=" bg-secondary-bg/70  ">
-            <img src={mainD} className=" object-cover " />
+            <img src={mainD} className=" object-cover " alt="siscode design2" />
           </div>
           <div className=" bg-secondary-bg/70 ">
-            <img src={mock3} className=" object-cover " />
+            <img src={mock3} className=" object-cover " alt="siscode design3" />
           </div>
           <div
             style={{
@@ -100,7 +103,7 @@ const Siscode = () => {
             }}
             className=" bg-secondary-bg/70 "
           >
-            <img src={mock1} className=" object-cover " />
+            <img src={mock1} className=" object-cover " alt="siscode design4" />
           </div>
         </div>
       </main>

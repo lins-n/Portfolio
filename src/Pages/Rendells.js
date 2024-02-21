@@ -4,7 +4,6 @@ import Footer from "../Footer";
 import rendells from "../images/rendells.jpg";
 import rp1 from "../images/rp1.jpg";
 import rp2 from "../images/rp2.jpg";
-import rp3 from "../images/rp3.png";
 const Rendells = () => {
   return (
     <div>
@@ -91,10 +90,10 @@ const Rendells = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4  container ">
           <div className=" bg-secondary-bg/70 ">
-            <img src={rp1} className=" object-cover " />
+            <img src={rp1} className=" object-cover " alt="rendells design1" />
           </div>
           <div className=" bg-secondary-bg/70  ">
-            <img src={rp2} className=" object-cover " />
+            <img src={rp2} className=" object-cover " alt="rendells design2" />
           </div>
         </div>
       </main>

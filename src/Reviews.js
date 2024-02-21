@@ -4,7 +4,7 @@ import astron from "./images/astron.png";
 import img10 from "./images/img10.png";
 import img13 from "./images/img13.png";
 import img14 from "./images/img14.png";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Reviews = () => {
   return (
@@ -36,7 +36,7 @@ const Reviews = () => {
             viewport={{ once: true }}
             className="bg-secondary-bg p-10 mb-6 border border-accent-color/25  hover:border-accent-color/75 ease-in"
           >
-            <img src={astron} width={100} />
+            <img src={astron} width={100} alt="astron logo" />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
                 logo design with COllins
@@ -61,7 +61,7 @@ const Reviews = () => {
             viewport={{ once: true }}
             className="bg-secondary-bg p-10 border border-accent-color/25  hover:border-accent-color/75 ease-in"
           >
-            <img src={img10} width={100} />
+            <img src={img10} width={100} alt="siscode logo" />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
                 Professional, Collaborative Experience with Collins.
@@ -92,7 +92,7 @@ const Reviews = () => {
             viewport={{ once: true }}
             className="bg-secondary-bg p-10 border mb-6 border-accent-color/25  hover:border-accent-color/75 ease-in"
           >
-            <img src={img13} width={100} />
+            <img src={img13} width={100} alt="elizabeth cooks logo" />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
                 Collins DID A GREAT JOB.
@@ -117,7 +117,7 @@ const Reviews = () => {
             viewport={{ once: true }}
             className="bg-secondary-bg p-10 border border-accent-color/25  hover:border-accent-color/75 ease-in"
           >
-            <img src={img14} width={100} />
+            <img src={img14} width={100} alt="studio37 logo" />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
                 PLEASANT EXPERIENCE.

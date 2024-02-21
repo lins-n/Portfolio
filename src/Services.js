@@ -1,7 +1,6 @@
-import React, { useRef, useEffect } from "react";
-import CTA from "./CTA";
+import React from "react";
 import Button from "./Button";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Services = () => {
   return (

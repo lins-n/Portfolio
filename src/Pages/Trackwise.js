@@ -7,8 +7,6 @@ import tr2 from "../images/tr2.jpg";
 import tr3 from "../images/tr3.jpg";
 import tr4 from "../images/tr4.jpg";
 import main from "../images/Main.mp4";
-import { MdAirlineSeatLegroomExtra } from "react-icons/md";
-import MidHeader from "../MidHeader";
 const Trackwise = () => {
   return (
     <div>
@@ -156,16 +154,16 @@ const Trackwise = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4  container ">
           <div className=" bg-secondary-bg/70 ">
-            <img src={tr1} className=" object-cover " />
+            <img src={tr1} className=" object-cover " alt="design1" />
           </div>
           <div className=" bg-secondary-bg/70  ">
-            <img src={tr2} className=" object-cover " />
+            <img src={tr2} className=" object-cover " alt="design2" />
           </div>
           <div className=" bg-secondary-bg/70 ">
-            <img src={tr3} className=" object-cover " />
+            <img src={tr3} className=" object-cover " alt="design3" />
           </div>
           <div className=" bg-secondary-bg/70 ">
-            <img src={tr4} className=" object-cover " />
+            <img src={tr4} className=" object-cover " alt="design4" />
           </div>
         </div>
         <div className="flex flex-col justify-center items-center w-max-screen-2xl w-full">
