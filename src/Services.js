@@ -17,7 +17,7 @@ const Services = () => {
         <h1 className="text-xl font-satoshi uppercase tracking-widest text-accent-color font-bold">
           Graphic Design
         </h1>
-        <p className="font-satoshi tracking-wide py-4 text-lg leading-7 text-accent-color">
+        <p className="font-satoshi tracking-wide py-4 text-base md:text-lg leading-7 text-accent-color">
           Elevate your brand with captivating visuals. As a graphic designer, I
           specialize in crafting stunning logos, flyers, and more
         </p>
@@ -30,7 +30,7 @@ const Services = () => {
         <h1 className="text-xl font-satoshi uppercase tracking-widest text-accent-color font-bold">
           UI/UX Design
         </h1>
-        <p className="font-satoshi tracking-wide py-4 text-lg leading-7 text-accent-color">
+        <p className="font-satoshi tracking-wide py-4 text-base md:text-lg leading-7 text-accent-color">
           I focus on crafting captivating interfaces for mobile apps, websites
           and more.Transforming ideas into seamless user experiences.
         </p>
@@ -43,7 +43,7 @@ const Services = () => {
         <h1 className="text-xl font-satoshi uppercase tracking-widest text-accent-color font-bold">
           Development
         </h1>
-        <p className="font-satoshi tracking-wide py-4 text-lg leading-7 text-accent-color">
+        <p className="font-satoshi tracking-wide py-4 text-base md:text-lg leading-7 text-accent-color">
           Crafting dynamic digital experiences through expert development.
           Transforming ideas into innovative solutions that leave a lasting
           impact.

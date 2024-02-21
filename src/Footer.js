@@ -108,7 +108,7 @@ const Footer = () => {
               <div className="bg-main-background ">
                 <ul className="flex justify-between p-8 items-center">
                   <li className="bg-secondary-bg font-satoshi text-lg h-24 w-24 flex justify-center items-center">
-                    <a href="https://api.whatsapp.com/send?=+233203999604">
+                    <a href="https://wa.me/qr/VU6EPX7LP3YTF1">
                       <img
                         src="https://img.icons8.com/ios-filled/50/DAC5A7/whatsapp--v1.png"
                         alt="whatsapp--v1"
@@ -124,7 +124,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="bg-secondary-bg font-satoshi text-lg h-24 w-24 flex justify-center items-center">
-                    <a href="collinsnudekor@gmail.com">
+                    <a href="mailto:collinsnudekor@gmail.com">
                       <img
                         src="https://img.icons8.com/ios-glyphs/50/DAC5A7/circled-envelope.png"
                         alt="circled-envelope"
