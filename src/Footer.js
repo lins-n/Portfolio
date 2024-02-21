@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import bgg from "./images/bgg.png";
-import { RiHome6Line } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -83,16 +83,24 @@ const Footer = () => {
                 <div>
                   <ul>
                     <li className="text-accent-color font-satoshi text-lg hover:font-bold ">
-                      <a href="ui/bitsy">Bitsy App</a>
+                      <Link to="ui/bitsy">
+                        <a>Bitsy App</a>
+                      </Link>
                     </li>
                     <li className="text-accent-color font-satoshi text-lg hover:font-bold">
-                      <a href="design/siscode">Siscode</a>
+                      <Link to="design/siscode">
+                        <a>Siscode</a>
+                      </Link>
                     </li>
                     <li className="text-accent-color font-satoshi text-lg hover:font-bold">
-                      <a href="design/baron">Barron</a>
+                      <Link to="design/baron">
+                        <a>Barron</a>
+                      </Link>
                     </li>
                     <li className="text-accent-color font-satoshi text-lg hover:font-bold">
-                      <a href="ui/trackwise">Trackwise</a>
+                      <Link to="ui/trackwise">
+                        <a>Trackwise</a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
