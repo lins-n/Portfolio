@@ -28,18 +28,16 @@ const Siscode = () => {
                 THE BRIEF
               </h1>
               <div className="w-full lg:w-2/3">
-                <p className="font-satoshi text-base text-accent-color">
-                  I take time to understand your business needs and audience to
-                  develop a unique concept for your website. I'll create
-                  wireframes that serve as the foundation for your site's design
-                  and functionality. I take time to understand your business
-                  needs and audience to develop a unique concept for your
-                  website. I'll create wireframes that serve as the foundation
-                  for your site's design and functionality. I take time to
-                  understand your business needs and audience to develop a
-                  unique concept for your website. I'll create wireframes that
-                  serve as the foundation for your site's design and
-                  functionality.
+                <p className="font-satoshi text-base  text-accent-color">
+                  Digital (IT and Coding) Literacy For Young Underpriviledged
+                  Girls
+                  <br />
+                  Empower african females and the youth to be competitive
+                  globally
+                  <br />
+                  Give the business a professional global appeal.
+                  <br />
+                  Youth centric, Modern, Fresh, Quick and Impactful.
                 </p>
               </div>
             </div>
@@ -52,10 +50,15 @@ const Siscode = () => {
               </h1>
               <div className="lg:w-2/3">
                 <p className="font-satoshi text-base text-accent-color">
-                  I take time to understand your business needs and audience to
-                  develop a unique concept for your website. I'll create
-                  wireframes that serve as the foundation for your site's design
-                  and functionality.
+                  The logo solution aims to encapsulate the essence of digital
+                  literacy for young underprivileged girls in Africa while
+                  projecting a professional global appeal. It features a modern,
+                  stylized globe symbolizing global competitiveness and
+                  connectivity. The typography is clean and modern, ensuring
+                  readability and a contemporary feel. Overall, the logo exudes
+                  a sense of modernity, youthfulness, and professionalism,
+                  embodying the mission to empower African females and youth in
+                  the digital age.
                 </p>
               </div>
             </div>
@@ -67,10 +70,11 @@ const Siscode = () => {
               </h1>
               <div className="lg:w-2/3">
                 <p className="font-gambetta italic text-base text-accent-color">
-                  "I take time to understand your business needs and audience to
-                  develop a unique concept for your website. I'll create
-                  wireframes that serve as the foundation for your site's design
-                  and functionality."
+                  " I had the pleasure of working with Collins on the logo
+                  project and was blown away by his expertise and
+                  professionalism. He made the process seamless and delivered a
+                  logo that exceeded our expectations. I highly recommend
+                  Collins for all your design needs."
                 </p>
               </div>
             </div>

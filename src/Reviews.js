@@ -20,8 +20,7 @@ const Reviews = () => {
           </span>{" "}
           Say
           <p className="text-lg lg:text-lg md:text-base sm:text-base text-accent-color text-center leading-2 font-satoshi p-4">
-            I enjoy making cool designs for mobile apps, websites, logos, and
-            more.
+            Project feedback from clients
           </p>
         </MidHeader>
       </motion.div>

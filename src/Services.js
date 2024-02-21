@@ -22,7 +22,7 @@ const Services = () => {
           Elevate your brand with captivating visuals. As a graphic designer, I
           specialize in crafting stunning logos, flyers, and more
         </p>
-        <a>
+        <a href="#design">
           <Button> projects</Button>
         </a>
       </div>

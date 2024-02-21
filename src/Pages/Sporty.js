@@ -25,17 +25,14 @@ const Sporty = () => {
               </h1>
               <div className="w-full lg:w-2/3">
                 <p className="font-satoshi text-base text-accent-color">
-                  I take time to understand your business needs and audience to
-                  develop a unique concept for your website. I'll create
-                  wireframes that serve as the foundation for your site's design
-                  and functionality. I take time to understand your business
-                  needs and audience to develop a unique concept for your
-                  website. I'll create wireframes that serve as the foundation
-                  for your site's design and functionality. I take time to
-                  understand your business needs and audience to develop a
-                  unique concept for your website. I'll create wireframes that
-                  serve as the foundation for your site's design and
-                  functionality.
+                  Our soccer recruitment agency aims to connect talented players
+                  with professional opportunities worldwide. We specialize in
+                  identifying promising athletes, providing them with exposure
+                  to top clubs and leagues, and facilitating their transition to
+                  professional soccer careers. With a focus on integrity,
+                  professionalism, and personalized support, we strive to become
+                  the go-to agency for both aspiring players and elite clubs
+                  seeking exceptional talent.
                 </p>
               </div>
             </div>
@@ -48,10 +45,17 @@ const Sporty = () => {
               </h1>
               <div className="lg:w-2/3">
                 <p className="font-satoshi text-base text-accent-color">
-                  I take time to understand your business needs and audience to
-                  develop a unique concept for your website. I'll create
-                  wireframes that serve as the foundation for your site's design
-                  and functionality.
+                  The logo solution for the soccer recruitment agency embodies
+                  the essence of professionalism, opportunity, and global
+                  connectivity. It features a dynamic and modern design, with a
+                  stylized soccer ball symbolizing the core focus of the agency.
+                  The use of bold, vibrant colors like orange and yellow
+                  reflects trust, growth, and ambition, while the clean
+                  typography exudes professionalism and clarity. Overall, the
+                  logo captures the essence of our agency's mission: to connect
+                  promising players with professional opportunities on a global
+                  scale, fostering growth, success, and excellence in the world
+                  of soccer recruitment.
                 </p>
               </div>
             </div>
@@ -63,10 +67,11 @@ const Sporty = () => {
               </h1>
               <div className="lg:w-2/3">
                 <p className="font-gambetta italic text-base text-accent-color">
-                  "I take time to understand your business needs and audience to
-                  develop a unique concept for your website. I'll create
-                  wireframes that serve as the foundation for your site's design
-                  and functionality."
+                  " I had the pleasure of working with Collins on the logo
+                  project and was blown away by his expertise and
+                  professionalism. He made the process seamless and delivered a
+                  logo that exceeded our expectations. I highly recommend
+                  Collins for all your design needs."
                 </p>
               </div>
             </div>

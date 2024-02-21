@@ -21,7 +21,7 @@ const Nav = () => {
         <RiHome6Line />
       </Link>
       <Link
-        to="/about"
+        to="/"
         onClick={() => setActive("#about")}
         className={active === "#about" ? "active" : ""}
       >
