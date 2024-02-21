@@ -32,53 +32,37 @@ const Footer = () => {
                 <br />
                 checkout these other projects
               </h1>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between ">
                 <div>
                   <ul>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 1</a>
+                    <li className="text-accent-color font-satoshi text-lg hover:font-bold ">
+                      <a href="#">Glossed Logo</a>
                     </li>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 2</a>
+                    <li className="text-accent-color font-satoshi text-lg hover:font-bold ">
+                      <a href="#">Portfolio Website</a>
                     </li>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 3</a>
+                    <li className="text-accent-color font-satoshi text-lg  hover:font-bold">
+                      <a href="#">OCS Logo</a>
                     </li>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 4</a>
+                    <li className="text-accent-color font-satoshi text-lg hover:font-bold">
+                      <a href="#">VRA Logo</a>
                     </li>
                   </ul>
                 </div>
 
                 <div>
                   <ul>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 1</a>
+                    <li className="text-accent-color font-satoshi text-lg hover:font-bold text-right">
+                      <a href="#">YawRay Logo</a>
                     </li>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 2</a>
+                    <li className="text-accent-color font-satoshi text-lg hover:font-bold text-right">
+                      <a href="#">Inventory App</a>
                     </li>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 3</a>
+                    <li className="text-accent-color font-satoshi text-lg hover:font-bold text-right">
+                      <a href="#">Dryce Laundry</a>
                     </li>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 4</a>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <ul>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 1</a>
-                    </li>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 2</a>
-                    </li>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 3</a>
-                    </li>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 4</a>
+                    <li className="text-accent-color font-satoshi text-lg hover:font-bold text-right">
+                      <a href="#">Jenkinson Construction</a>
                     </li>
                   </ul>
                 </div>
@@ -98,17 +82,17 @@ const Footer = () => {
                 </h1>
                 <div>
                   <ul>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 1</a>
+                    <li className="text-accent-color font-satoshi text-lg hover:font-bold ">
+                      <a href="ui/bitsy">Bitsy App</a>
                     </li>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 2</a>
+                    <li className="text-accent-color font-satoshi text-lg hover:font-bold">
+                      <a href="design/siscode">Siscode</a>
                     </li>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 3</a>
+                    <li className="text-accent-color font-satoshi text-lg hover:font-bold">
+                      <a href="/design/barron">Barron</a>
                     </li>
-                    <li className="text-accent-color font-satoshi text-lg ">
-                      <a href="#">Project 4</a>
+                    <li className="text-accent-color font-satoshi text-lg hover:font-bold">
+                      <a href="/ui/trackwise">Trackwise</a>
                     </li>
                   </ul>
                 </div>
@@ -116,18 +100,27 @@ const Footer = () => {
               <div className="bg-main-background ">
                 <ul className="flex justify-between p-8 items-center">
                   <li className="bg-secondary-bg font-satoshi text-lg h-24 w-24 flex justify-center items-center">
-                    <a href="#">
-                      <RiHome6Line size={38} color="#DAC5A7" />
+                    <a href="https://api.whatsapp.com/send?=+233203999604">
+                      <img
+                        src="https://img.icons8.com/ios-filled/50/DAC5A7/whatsapp--v1.png"
+                        alt="whatsapp--v1"
+                      />
                     </a>
                   </li>
                   <li className="bg-secondary-bg font-satoshi text-lg h-24 w-24 flex justify-center items-center">
-                    <a href="#">
-                      <RiHome6Line size={38} color="#DAC5A7" />
+                    <a href="https://twitter.com/_lins_n">
+                      <img
+                        src="https://img.icons8.com/ios-glyphs/50/DAC5A7/instagram-circle.png"
+                        alt="instagram-circle"
+                      />
                     </a>
                   </li>
                   <li className="bg-secondary-bg font-satoshi text-lg h-24 w-24 flex justify-center items-center">
-                    <a href="#">
-                      <RiHome6Line size={38} color="#DAC5A7" />
+                    <a href="collinsnudekor@gmail.com">
+                      <img
+                        src="https://img.icons8.com/ios-glyphs/50/DAC5A7/circled-envelope.png"
+                        alt="circled-envelope"
+                      />
                     </a>
                   </li>
                 </ul>

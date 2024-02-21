@@ -1,8 +1,11 @@
 import React from "react";
 import HeaderComp from "../Components/HeaderComp";
 import Footer from "../Footer";
-import mockups from "../images/mockups.png";
-import img6 from "../images/img6.jpg";
+import reps1 from "../images/reps1.jpg";
+import rep2 from "../images/rep2.jpg";
+import rep3 from "../images/rep3.jpg";
+import rep4 from "../images/rep4.jpg";
+import rep5 from "../images/rep5.jpg";
 const Sporty = () => {
   return (
     <div>
@@ -12,9 +15,9 @@ const Sporty = () => {
       </HeaderComp>
       <main className="container p-5 max-w-screen-2xl">
         <div>
-          <img src={mockups} alt="placeholder" />
+          <img src={reps1} alt="placeholder" />
         </div>
-        <div className="divide-y divide-accent-color/30 pb-14 ">
+        <div className="divide-y divide-accent-color/30 pb-14 p-4 ">
           <div className="w-full py-14">
             <div className="lg:flex justify-between">
               <h1 className="font-satoshi uppercase tracking-widest py-3 text-accent-color">
@@ -72,16 +75,13 @@ const Sporty = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4  container ">
           <div className=" bg-secondary-bg/70 ">
-            <img src={img6} className=" object-cover " />
-          </div>
-          <div className=" bg-secondary-bg/70  ">
-            <img src={img6} className=" object-cover " />
+            <img src={rep2} className=" object-cover " />
           </div>
           <div className=" bg-secondary-bg/70 ">
-            <img src={img6} className=" object-cover " />
+            <img src={rep4} className=" object-cover " />
           </div>
-          <div className=" bg-secondary-bg/70 ">
-            <img src={img6} className=" object-cover " />
+          <div className=" bg-secondary-bg/70  col-span-2">
+            <img src={rep5} className=" object-cover " />
           </div>
         </div>
       </main>

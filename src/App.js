@@ -9,6 +9,7 @@ import Sporty from "./Pages/Sporty";
 import Trackwise from "./Pages/Trackwise";
 import ItFits from "./Pages/ItFits";
 import Rendells from "./Pages/Rendells";
+import Baron from "./Pages/Baron";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/design" element={<DesignProject />} />
           <Route path="/design/siscode" element={<Siscode />} />
           <Route path="design/sporty" element={<Sporty />} />
+          <Route path="design/baron" element={<Baron />} />
           <Route path="ui/trackwise" element={<Trackwise />} />
           <Route path="ui/itfits" element={<ItFits />} />
           <Route path="ui/rendells" element={<Rendells />} />

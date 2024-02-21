@@ -19,7 +19,7 @@ const Designs = () => {
   //   }
   // }, [isInView]);
   return (
-    <div className="max-w-screen-2xl container">
+    <div className="max-w-screen-2xl container " id="design">
       <motion.div
         initial={{ opacity: 0, y: 75 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -105,30 +105,31 @@ const Designs = () => {
             </div>
           </motion.div>
         </Link>
-
-        <motion.div
-          initial={{ opacity: 0, y: 75 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          style={{
-            backgroundImage: `url(${barron})`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            height: 450,
-          }}
-          className="relative "
-        >
-          <div className="bg-secondary-bg/50 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between items-center m-6 p-4 s ">
-            <p className="tracking-widest font-satoshi text-accent-color font-bold">
-              BARRON PROPERTY LOGO
-            </p>
-            <p className="tracking-widest text-sm lg:text-base  font-satoshi text-accent-color">
-              GRAPHIC DESIGN
-            </p>
-          </div>
-        </motion.div>
+        <Link to="/design/baron">
+          <motion.div
+            initial={{ opacity: 0, y: 75 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            style={{
+              backgroundImage: `url(${barron})`,
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              height: 450,
+            }}
+            className="relative "
+          >
+            <div className="bg-secondary-bg/50 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between items-center m-6 p-4 s ">
+              <p className="tracking-widest font-satoshi text-accent-color font-bold">
+                BARRON PROPERTY LOGO
+              </p>
+              <p className="tracking-widest text-sm lg:text-base  font-satoshi text-accent-color">
+                GRAPHIC DESIGN
+              </p>
+            </div>
+          </motion.div>
+        </Link>
       </div>
     </div>
   );

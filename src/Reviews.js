@@ -1,6 +1,9 @@
 import React from "react";
 import MidHeader from "./MidHeader";
 import astron from "./images/astron.png";
+import img10 from "./images/img10.png";
+import img13 from "./images/img13.png";
+import img14 from "./images/img14.png";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 const Reviews = () => {
@@ -8,11 +11,18 @@ const Reviews = () => {
     <div className="max-w-screen-2xl container">
       <motion.div>
         <MidHeader>
+          <p className=" font-satoshi text-accent-color text-base tracking-widest my-6 uppercase text-center ">
+            reviews
+          </p>
           What{" "}
           <span className="italic text-accent-color font-gambetta">
             Clients
           </span>{" "}
           Say
+          <p className="text-lg lg:text-lg md:text-base sm:text-base text-accent-color text-center leading-2 font-satoshi p-4">
+            I enjoy making cool designs for mobile apps, websites, logos, and
+            more.
+          </p>
         </MidHeader>
       </motion.div>
       <div
@@ -56,7 +66,7 @@ const Reviews = () => {
             viewport={{ once: true }}
             className="bg-secondary-bg p-10 border border-accent-color/25  hover:border-accent-color/75 ease-in"
           >
-            <img src={astron} width={100} />
+            <img src={img10} width={100} />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
                 Professional, Collaborative Web Design Experience with Collins.
@@ -87,7 +97,7 @@ const Reviews = () => {
             viewport={{ once: true }}
             className="bg-secondary-bg p-10 border mb-6 border-accent-color/25  hover:border-accent-color/75 ease-in"
           >
-            <img src={astron} width={100} />
+            <img src={img13} width={100} />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
                 Professional, Collaborative Web Design Experience with Collins.
@@ -113,7 +123,7 @@ const Reviews = () => {
             viewport={{ once: true }}
             className="bg-secondary-bg p-10 border border-accent-color/25  hover:border-accent-color/75 ease-in"
           >
-            <img src={astron} width={100} />
+            <img src={img14} width={100} />
             <div className="my-3">
               <h1 className="text-lg font-satoshi uppercase tracking-widest text-accent-color pt-6 ">
                 Professional, Collaborative Web Design Experience with Collins.
