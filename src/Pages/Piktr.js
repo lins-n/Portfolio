@@ -33,7 +33,7 @@ const features = [
   {
     index: "03",
     title: "Colour Hunt",
-    body: "Groups of friends go on a shared colour hunt — each person submitting photos of the same colour from their own environment. A collaborative challenge that turns everyday surroundings into a game.",
+    body: "Groups of friends go on a colour hunt — but each person is assigned a different colour to track down. Everyone submits what they found and sees what the others were hunting. A collaborative challenge where no two searches are the same.",
   },
 ];
 
@@ -171,10 +171,10 @@ const Piktr = () => (
             className="font-grotesk leading-relaxed mt-5"
             style={{ color: "#888", fontWeight: 300, fontSize: "clamp(1rem, 1.5vw, 1.2rem)", lineHeight: 1.7 }}
           >
-            Colour Hunt adds a social layer — groups of friends race to photograph
-            the same colour from their own surroundings, submitting entries that
-            the group votes on. A shared challenge that turns the everyday
-            environment into a game.
+            Colour Hunt adds a social layer — each participant in a group is
+            assigned a different colour to track down, then submits a photo of
+            what they found. Everyone sees what the others were hunting. A
+            shared challenge where no two searches are the same.
           </p>
         </motion.div>
       </div>
