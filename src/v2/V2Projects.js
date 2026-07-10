@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const projects = [
-  { num: "01", title: "Piktr", category: "Mobile App", year: "2026", to: "/ui/piktr" },
-  { num: "02", title: "Siscode Gh", category: "Brand Identity", year: "2024", to: "/design/siscode" },
-  { num: "03", title: "Bitsy App", category: "UI Design", year: "2024", to: "/ui/bitsy" },
-  { num: "04", title: "Sporty Reps", category: "Graphic Design", year: "2023", to: "/design/sporty" },
-  { num: "05", title: "Baron Property", category: "Brand Identity", year: "2023", to: "/design/baron" },
-  { num: "06", title: "Rendells Website", category: "UI Design", year: "2024", to: "/ui/rendells" },
-  { num: "07", title: "Trackwise", category: "UI Design", year: "2024", to: "/ui/trackwise" },
+  { num: "01", title: "Piktr",            category: "Mobile App",     year: "2026", to: "/ui/piktr" },
+  { num: "02", title: "Siscode Gh",       category: "Brand Identity", year: "2024", to: "/design/siscode" },
+  { num: "03", title: "Modena",           category: "Brand Identity", year: "2024", to: "/design/modena" },
+  { num: "04", title: "Bitsy App",        category: "UI Design",      year: "2024", to: "/ui/bitsy" },
+  { num: "05", title: "Sporty Reps",      category: "Graphic Design", year: "2023", to: "/design/sporty" },
+  { num: "06", title: "Baron Property",   category: "Brand Identity", year: "2023", to: "/design/baron" },
+  { num: "07", title: "Rendells Website", category: "UI Design",      year: "2024", to: "/ui/rendells" },
+  { num: "08", title: "Trackwise",        category: "UI Design",      year: "2024", to: "/ui/trackwise" },
 ];
 
 const ProjectRow = ({ project, index }) => (

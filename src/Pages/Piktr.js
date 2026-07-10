@@ -32,8 +32,8 @@ const features = [
   },
   {
     index: "03",
-    title: "Social Feed",
-    body: "A curated feed surfaces the best submissions from people you follow. Reactions are minimal by design — the photo does the talking.",
+    title: "Colour Hunt",
+    body: "Groups of friends go on a shared colour hunt — each person submitting photos of the same colour from their own environment. A collaborative challenge that turns everyday surroundings into a game.",
   },
 ];
 
@@ -76,8 +76,8 @@ const Piktr = () => (
 
         {/* Wordmark */}
         <motion.h1
-          className="font-grotesk leading-none tracking-tight"
-          style={{ fontSize: "clamp(5.5rem, 20vw, 18rem)", fontWeight: 700, color: "#ffffff", letterSpacing: "-0.03em" }}
+          className="font-jaune leading-none"
+          style={{ fontSize: "clamp(5.5rem, 20vw, 18rem)", color: "#ffffff", letterSpacing: "-0.01em" }}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
@@ -166,6 +166,15 @@ const Piktr = () => (
             letting users string together a sequence of moments from their day.
             Both formats are designed to make the app feel meaningful to open, not
             compulsive.
+          </p>
+          <p
+            className="font-grotesk leading-relaxed mt-5"
+            style={{ color: "#888", fontWeight: 300, fontSize: "clamp(1rem, 1.5vw, 1.2rem)", lineHeight: 1.7 }}
+          >
+            Colour Hunt adds a social layer — groups of friends race to photograph
+            the same colour from their own surroundings, submitting entries that
+            the group votes on. A shared challenge that turns the everyday
+            environment into a game.
           </p>
         </motion.div>
       </div>
@@ -257,6 +266,47 @@ const Piktr = () => (
           </motion.div>
         ))}
       </div>
+    </section>
+
+    {/* WAITLIST */}
+    <section
+      className="v2-section py-24 lg:py-32"
+      style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
+    >
+      <motion.div
+        className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10"
+        {...fade}
+      >
+        <div>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] mb-5" style={{ color: "#6757d4" }}>
+            Early Access
+          </p>
+          <h2
+            className="font-jaune leading-none"
+            style={{ fontSize: "clamp(3rem, 8vw, 7rem)", color: "#ebebeb", letterSpacing: "-0.01em" }}
+          >
+            Join the<br />waitlist.
+          </h2>
+          <p className="font-grotesk mt-6 max-w-[38ch] leading-relaxed" style={{ color: "#555", fontWeight: 300, fontSize: "0.95rem" }}>
+            Piktr is in development. Sign up to be among the first to get access when we launch.
+          </p>
+        </div>
+
+        <motion.a
+          href="https://waitlister.me/p/piktr?timestamp=1783678422719"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] shrink-0"
+          style={{ background: "#6757d4", color: "#ffffff", textDecoration: "none" }}
+          whileHover={{ background: "#5646c0" }}
+          transition={{ duration: 0.18 }}
+        >
+          Join Waitlist
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </motion.a>
+      </motion.div>
     </section>
 
     {/* CLOSING - tech strip */}

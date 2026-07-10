@@ -13,6 +13,7 @@ const Trackwise     = lazy(() => import("./Pages/Trackwise"));
 const ItFits        = lazy(() => import("./Pages/ItFits"));
 const Rendells      = lazy(() => import("./Pages/Rendells"));
 const Baron         = lazy(() => import("./Pages/Baron"));
+const Modena        = lazy(() => import("./Pages/Modena"));
 
 function App() {
   return (
@@ -30,7 +31,8 @@ function App() {
           <Route path="ui/trackwise"     element={<Trackwise />} />
           <Route path="ui/itfits"        element={<ItFits />} />
           <Route path="ui/rendells"      element={<Rendells />} />
-          <Route path="ui/bitsy"         element={<Bitsy />} />
+          <Route path="ui/bitsy"          element={<Bitsy />} />
+          <Route path="/design/modena"   element={<Modena />} />
         </Routes>
       </Suspense>
     </Router>

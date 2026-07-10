@@ -68,11 +68,12 @@ const Trackwise = () => (
           </motion.p>
         </div>
         <motion.div
-          className="overflow-hidden"
+          className="relative overflow-hidden"
+          style={{ minHeight: 480 }}
           initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.1 }}
         >
-          <img src={header} alt="Trackwise app" className="w-full h-full object-cover" style={{ minHeight: 480 }} />
+          <img src={header} alt="Trackwise app" className="absolute inset-0 w-full h-full object-cover" />
         </motion.div>
       </div>
     </section>

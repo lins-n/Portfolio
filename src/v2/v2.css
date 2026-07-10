@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'NaNJaune';
+  src: url('../fonts/NaNJauneTRIAL-MaxiBlond-BF65a9e467d6680.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+.font-jaune {
+  font-family: 'NaNJaune', sans-serif;
+}
+
 :root {
   --v2-bg: #0c0c0c;
   --v2-surface: #111111;
