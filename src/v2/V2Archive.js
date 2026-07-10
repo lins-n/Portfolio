@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react";
+import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -38,7 +38,27 @@ const ALL_PHOTOS = [
 
 const PREVIEW_COUNT = 8;
 
+const slideVariants = {
+  enter: (dir) => ({ x: dir >= 0 ? "55%" : "-55%", opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (dir) => ({ x: dir >= 0 ? "-55%" : "55%", opacity: 0 }),
+};
+
 const Lightbox = ({ photos, index, onClose, onPrev, onNext, onJump }) => {
+  const [direction, setDirection] = useState(0);
+  const prevIndexRef = useRef(index);
+
+  /* track slide direction */
+  useEffect(() => {
+    const prev = prevIndexRef.current;
+    const n = photos.length;
+    if (index !== prev) {
+      const forward = (index > prev && !(prev === n - 1 && index === 0)) || (prev === n - 1 && index === 0);
+      setDirection(forward ? 1 : -1);
+      prevIndexRef.current = index;
+    }
+  }, [index, photos.length]);
+
   /* keyboard nav */
   useEffect(() => {
     const handler = (e) => {
@@ -57,7 +77,7 @@ const Lightbox = ({ photos, index, onClose, onPrev, onNext, onJump }) => {
   }, []);
 
   /* touch swipe */
-  const touchStart = React.useRef(null);
+  const touchStart = useRef(null);
   const handleTouchStart = (e) => { touchStart.current = e.touches[0].clientX; };
   const handleTouchEnd = (e) => {
     if (touchStart.current === null) return;
@@ -65,6 +85,8 @@ const Lightbox = ({ photos, index, onClose, onPrev, onNext, onJump }) => {
     if (Math.abs(delta) > 40) delta > 0 ? onNext() : onPrev();
     touchStart.current = null;
   };
+
+  const progress = ((index + 1) / photos.length) * 100;
 
   return (
     <motion.div
@@ -96,76 +118,51 @@ const Lightbox = ({ photos, index, onClose, onPrev, onNext, onJump }) => {
 
       {/* Image */}
       <div className="flex-1 flex items-center justify-center overflow-hidden px-4 py-4 relative">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" custom={direction}>
           <motion.img
             key={index}
+            custom={direction}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
             src={photos[index]}
             alt={`Archive ${index + 1}`}
             className="object-contain"
-            style={{ maxHeight: "100%", maxWidth: "100%" }}
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.02 }}
-            transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+            style={{ maxHeight: "100%", maxWidth: "100%", position: "relative" }}
+            transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
           />
         </AnimatePresence>
 
         {/* Prev / Next hit areas */}
-        <button
-          onClick={onPrev}
-          className="absolute left-0 top-0 h-full flex items-center px-4 group"
-          style={{ width: "15%", minWidth: 48 }}
-          aria-label="Previous"
-        >
-          <span
-            className="flex items-center justify-center w-9 h-9 border transition-all duration-200 opacity-0 group-hover:opacity-100"
-            style={{ borderColor: "rgba(255,255,255,0.15)", color: "#ebebeb" }}
-          >
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <path d="M8 1L3 6l5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+        <button onClick={onPrev} className="absolute left-0 top-0 h-full flex items-center px-4 group" style={{ width: "15%", minWidth: 48 }} aria-label="Previous">
+          <span className="flex items-center justify-center w-9 h-9 border transition-all duration-200 opacity-0 group-hover:opacity-100" style={{ borderColor: "rgba(255,255,255,0.15)", color: "#ebebeb" }}>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M8 1L3 6l5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
           </span>
         </button>
-        <button
-          onClick={onNext}
-          className="absolute right-0 top-0 h-full flex items-center px-4 group"
-          style={{ width: "15%", minWidth: 48 }}
-          aria-label="Next"
-        >
-          <span
-            className="flex items-center justify-center w-9 h-9 border transition-all duration-200 opacity-0 group-hover:opacity-100"
-            style={{ borderColor: "rgba(255,255,255,0.15)", color: "#ebebeb" }}
-          >
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <path d="M4 1l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+        <button onClick={onNext} className="absolute right-0 top-0 h-full flex items-center px-4 group" style={{ width: "15%", minWidth: 48 }} aria-label="Next">
+          <span className="flex items-center justify-center w-9 h-9 border transition-all duration-200 opacity-0 group-hover:opacity-100" style={{ borderColor: "rgba(255,255,255,0.15)", color: "#ebebeb" }}>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4 1l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
           </span>
         </button>
       </div>
 
       {/* Thumbnail strip */}
-      <div
-        className="shrink-0 flex gap-1.5 overflow-x-auto py-3 px-4"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.06)", scrollbarWidth: "none" }}
-      >
+      <div className="shrink-0 flex gap-1.5 overflow-x-auto py-3 px-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)", scrollbarWidth: "none" }}>
         {photos.map((src, i) => (
-          <button
-            key={i}
-            onClick={() => onJump(i)}
-            style={{
-              flexShrink: 0,
-              width: 44,
-              height: 44,
-              opacity: i === index ? 1 : 0.3,
-              outline: i === index ? "1px solid #6757d4" : "none",
-              outlineOffset: 2,
-              overflow: "hidden",
-              transition: "opacity 0.2s",
-            }}
-          >
+          <button key={i} onClick={() => onJump(i)} style={{ flexShrink: 0, width: 44, height: 44, opacity: i === index ? 1 : 0.3, outline: i === index ? "1px solid #6757d4" : "none", outlineOffset: 2, overflow: "hidden", transition: "opacity 0.2s" }}>
             <img src={src} alt="" className="w-full h-full object-cover" />
           </button>
         ))}
+      </div>
+
+      {/* Progress bar */}
+      <div style={{ height: 2, background: "rgba(255,255,255,0.06)", flexShrink: 0 }}>
+        <motion.div
+          style={{ height: "100%", background: "#6757d4", originX: 0 }}
+          animate={{ width: `${progress}%` }}
+          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        />
       </div>
     </motion.div>
   );

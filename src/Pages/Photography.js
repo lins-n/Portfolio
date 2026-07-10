@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import V2Nav from "../v2/V2Nav";
 
@@ -38,8 +38,27 @@ const ALL_PHOTOS = [
 
 const BATCH = 9;
 
+const slideVariants = {
+  enter: (dir) => ({ x: dir >= 0 ? "55%" : "-55%", opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (dir) => ({ x: dir >= 0 ? "-55%" : "55%", opacity: 0 }),
+};
+
 /* ── Lightbox ── */
 const Lightbox = ({ photos, index, onClose, onPrev, onNext, onJump }) => {
+  const [direction, setDirection] = useState(0);
+  const prevIndexRef = useRef(index);
+
+  useEffect(() => {
+    const prev = prevIndexRef.current;
+    const n = photos.length;
+    if (index !== prev) {
+      const forward = (index > prev && !(prev === n - 1 && index === 0)) || (prev === n - 1 && index === 0);
+      setDirection(forward ? 1 : -1);
+      prevIndexRef.current = index;
+    }
+  }, [index, photos.length]);
+
   useEffect(() => {
     const handler = (e) => {
       if (e.key === "ArrowLeft") onPrev();
@@ -55,7 +74,7 @@ const Lightbox = ({ photos, index, onClose, onPrev, onNext, onJump }) => {
     return () => { document.body.style.overflow = ""; };
   }, []);
 
-  const touchStart = React.useRef(null);
+  const touchStart = useRef(null);
   const handleTouchStart = (e) => { touchStart.current = e.touches[0].clientX; };
   const handleTouchEnd = (e) => {
     if (touchStart.current === null) return;
@@ -63,6 +82,8 @@ const Lightbox = ({ photos, index, onClose, onPrev, onNext, onJump }) => {
     if (Math.abs(delta) > 40) delta > 0 ? onNext() : onPrev();
     touchStart.current = null;
   };
+
+  const progress = ((index + 1) / photos.length) * 100;
 
   return (
     <motion.div
@@ -90,17 +111,19 @@ const Lightbox = ({ photos, index, onClose, onPrev, onNext, onJump }) => {
 
       {/* Image */}
       <div className="flex-1 flex items-center justify-center overflow-hidden px-4 py-4 relative">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" custom={direction}>
           <motion.img
             key={index}
+            custom={direction}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
             src={photos[index]}
-            alt={`Photo ${index + 1}`}
+            alt={`Archive ${index + 1}`}
             className="object-contain"
-            style={{ maxHeight: "100%", maxWidth: "100%" }}
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.02 }}
-            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            style={{ maxHeight: "100%", maxWidth: "100%", position: "relative" }}
+            transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
           />
         </AnimatePresence>
 
@@ -123,6 +146,15 @@ const Lightbox = ({ photos, index, onClose, onPrev, onNext, onJump }) => {
             <img src={src} alt="" className="w-full h-full object-cover" />
           </button>
         ))}
+      </div>
+
+      {/* Progress bar */}
+      <div style={{ height: 2, background: "rgba(255,255,255,0.06)", flexShrink: 0 }}>
+        <motion.div
+          style={{ height: "100%", background: "#6757d4", originX: 0 }}
+          animate={{ width: `${progress}%` }}
+          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        />
       </div>
     </motion.div>
   );
