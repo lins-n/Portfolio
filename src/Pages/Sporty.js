@@ -1,98 +1,118 @@
 import React from "react";
-import HeaderComp from "../Components/HeaderComp";
-import Footer from "../Footer";
+import { motion } from "framer-motion";
+import CaseStudyShell from "../v2/CaseStudyShell";
 import reps1 from "../images/reps1.jpg";
 import rep2 from "../images/rep2.jpg";
 import rep4 from "../images/rep4.jpg";
 import rep5 from "../images/rep5.jpg";
-const Sporty = () => {
-  return (
-    <div>
-      <HeaderComp>
-        Sporty
-        <span className="font-gambetta italic text-accent-color">Reps</span>
-      </HeaderComp>
-      <main className="container p-5 max-w-screen-2xl">
-        <div>
-          <img src={reps1} alt="placeholder" />
-        </div>
-        <div className="divide-y divide-accent-color/30 pb-14 p-4 ">
-          <div className="w-full py-14">
-            <div className="lg:flex justify-between">
-              <h1 className="font-satoshi uppercase tracking-widest py-3 text-accent-color">
-                THE BRIEF
-              </h1>
-              <div className="w-full lg:w-2/3">
-                <p className="font-satoshi text-base text-accent-color">
-                  Our soccer recruitment agency aims to connect talented players
-                  with professional opportunities worldwide. We specialize in
-                  identifying promising athletes, providing them with exposure
-                  to top clubs and leagues, and facilitating their transition to
-                  professional soccer careers. With a focus on integrity,
-                  professionalism, and personalized support, we strive to become
-                  the go-to agency for both aspiring players and elite clubs
-                  seeking exceptional talent.
-                </p>
-              </div>
-            </div>
-          </div>
 
-          <div className="w-full py-14">
-            <div className="lg:flex justify-between">
-              <h1 className="font-satoshi uppercase tracking-widest py-3 text-accent-color">
-                THE SOLUTION
-              </h1>
-              <div className="lg:w-2/3">
-                <p className="font-satoshi text-base text-accent-color">
-                  The logo solution for the soccer recruitment agency embodies
-                  the essence of professionalism, opportunity, and global
-                  connectivity. It features a dynamic and modern design, with a
-                  stylized soccer ball symbolizing the core focus of the agency.
-                  The use of bold, vibrant colors like orange and yellow
-                  reflects trust, growth, and ambition, while the clean
-                  typography exudes professionalism and clarity. Overall, the
-                  logo captures the essence of our agency's mission: to connect
-                  promising players with professional opportunities on a global
-                  scale, fostering growth, success, and excellence in the world
-                  of soccer recruitment.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="w-full py-14">
-            <div className="lg:flex justify-between">
-              <h1 className="font-satoshi uppercase tracking-widest py-3 text-accent-color">
-                TESTIMONIAL
-              </h1>
-              <div className="lg:w-2/3">
-                <p className="font-gambetta italic text-base text-accent-color">
-                  " I had the pleasure of working with Collins on the logo
-                  project and was blown away by his expertise and
-                  professionalism. He made the process seamless and delivered a
-                  logo that exceeded our expectations. I highly recommend
-                  Collins for all your design needs."
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+/* Layout: STADIUM ENERGY
+   Split hero: massive number + title left, cover image fills right,
+   wide editorial text sections, horizontal full-bleed image strip at end. */
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4  container ">
-          <div className=" bg-secondary-bg/70 ">
-            <img src={rep2} className=" object-cover " alt="sporty design1" />
-          </div>
-          <div className=" bg-secondary-bg/70 ">
-            <img src={rep4} className=" object-cover " alt="sporty design2" />
-          </div>
-          <div className=" bg-secondary-bg/70  col-span-2">
-            <img src={rep5} className=" object-cover " alt="sporty design3" />
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </div>
-  );
+const fade = {
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
 };
+
+const Sporty = () => (
+  <CaseStudyShell
+    prev={{ to: "/ui/itfits", label: "ItFits App" }}
+    next={{ to: "/design/baron", label: "Baron Property" }}
+  >
+    {/* HERO - split panel */}
+    <section className="pt-[64px] min-h-[100dvh] flex flex-col justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100dvh-64px)]">
+        {/* Left: text */}
+        <div className="flex flex-col justify-end p-10 lg:p-16 pb-16">
+          <motion.p
+            className="font-mono text-[11px] uppercase tracking-[0.22em] mb-8"
+            style={{ color: "#6757d4" }}
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}
+          >
+            Brand + Print / 2023
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <h1
+              className="font-grotesk leading-none tracking-tight"
+              style={{ fontSize: "clamp(4rem, 8vw, 8rem)", fontWeight: 700, color: "#ebebeb" }}
+            >
+              Sporty<br />
+              <span style={{ color: "#6757d4" }}>Reps.</span>
+            </h1>
+          </motion.div>
+          <motion.div
+            className="mt-12 grid grid-cols-2 gap-6 max-w-[380px]"
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
+            {[
+              { label: "Role", value: "Graphic Designer" },
+              { label: "Year", value: "2023" },
+              { label: "Type", value: "Brand Identity" },
+              { label: "Output", value: "Logo + Print" },
+            ].map((item) => (
+              <div key={item.label} className="pb-3" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+                <p className="font-mono text-[9px] uppercase tracking-[0.18em] mb-1" style={{ color: "#444" }}>{item.label}</p>
+                <p className="font-grotesk text-sm" style={{ color: "#ebebeb", fontWeight: 400 }}>{item.value}</p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Right: cover image fills panel */}
+        <motion.div
+          className="overflow-hidden"
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.1 }}
+          style={{ minHeight: 500 }}
+        >
+          <img src={reps1} alt="Sporty Reps identity" className="w-full h-full object-cover" />
+        </motion.div>
+      </div>
+    </section>
+
+    {/* BRIEF + SOLUTION */}
+    <section
+      className="v2-section py-24 lg:py-32"
+      style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <motion.div {...fade}>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] mb-5" style={{ color: "#6757d4" }}>The Brief</p>
+          <p className="font-grotesk leading-relaxed" style={{ color: "#888", fontWeight: 300, fontSize: "1rem" }}>
+            Sporty Reps is a soccer recruitment agency connecting talented players with professional clubs worldwide. They needed a brand that communicated integrity and global reach, while projecting the energy and ambition of the sport itself.
+          </p>
+        </motion.div>
+        <motion.div {...fade} transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] mb-5" style={{ color: "#6757d4" }}>The Solution</p>
+          <p className="font-grotesk leading-relaxed" style={{ color: "#888", fontWeight: 300, fontSize: "1rem" }}>
+            A dynamic identity built around a stylized soccer ball mark. Bold orange and yellow communicate growth, ambition, and energy without sacrificing professionalism. The clean typography keeps the mark feeling polished and globally credible rather than local or amateur.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+
+    {/* IMAGE ROW - two then full-bleed */}
+    <section className="v2-section pb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <motion.img src={rep2} alt="Sporty Reps logo" className="w-full object-cover" style={{ maxHeight: 420 }} {...fade} />
+        <motion.img src={rep4} alt="Sporty Reps application" className="w-full object-cover" style={{ maxHeight: 420 }} {...fade} transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }} />
+      </div>
+    </section>
+
+    {/* FULL BLEED CLOSER */}
+    <motion.section {...fade}>
+      <img src={rep5} alt="Sporty Reps full brand" className="w-full" style={{ display: "block" }} />
+    </motion.section>
+
+    <div className="pb-24" />
+  </CaseStudyShell>
+);
 
 export default Sporty;

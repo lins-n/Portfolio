@@ -8,35 +8,24 @@ module.exports = {
         padding: "1rem",
       },
       colors: {
-        white: "#2D2D2D",
         "secondary-bg": "#1D1E1F",
-        "tertiary-bg": "##212121",
         "accent-color": "#DAC5A7",
         "main-background": "#0E0E0E",
       },
-      fontSize: {
-        base: [
-          "1rem",
-          {
-            color: "#DAC5A7",
-            fontFamily: "Satoshi-Light",
-          },
-        ],
-      },
-
       fontFamily: {
-        satoshi: "Satoshi-Light",
-        gambetta: "Gambetta-LightItalic",
+        satoshi: '"Satoshi-Variable", sans-serif',
+        gambetta: '"Gambetta-VariableItalic", serif',
+        "gambetta-upright": '"Gambetta-Variable", serif',
+        grotesk: '"Space Grotesk", sans-serif',
+        mono: '"Space Mono", monospace',
       },
       animation: {
-        ["infinite-slider"]: "infiniteSlider 20s linear infinite",
+        loop: "loop 28s linear infinite",
       },
       keyframes: {
-        infiniteSlider: {
+        loop: {
           "0%": { transform: "translateX(0)" },
-          "100%": {
-            transform: "translateX(calc(-250px * 5))",
-          },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
     },

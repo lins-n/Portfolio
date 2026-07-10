@@ -1,20 +1,19 @@
-import React, { Children } from "react";
+import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
-import { useState } from "react";
 
-const Button = (props) => {
-  const { children } = props;
+const Button = ({ children }) => {
   return (
-    <div className="gap-4 flex  items-center">
-      <div
-        className=" text-accent-color hover:bg-accent-color/25 bg-accent-color/5 rounded-full 
-        p-1 border hover:rotate-45 transition duration-500 ease-in-out border-accent-color "
+    <div className="group inline-flex items-center gap-2 cursor-pointer">
+      <span
+        className="font-satoshi text-sm uppercase tracking-widest text-accent-color/60 group-hover:text-accent-color transition-colors duration-200"
+        style={{ fontVariationSettings: '"wght" 400' }}
       >
-        <GoArrowUpRight size={18} />
-      </div>
-      <button className="text-base text-accent-color uppercase tracking-widest font-satoshi ">
         {children}
-      </button>
+      </span>
+      <GoArrowUpRight
+        size={16}
+        className="text-accent-color/60 group-hover:text-accent-color group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200"
+      />
     </div>
   );
 };

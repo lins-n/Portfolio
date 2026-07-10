@@ -1,16 +1,23 @@
 import React from "react";
-import { useState } from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
-const SubHeader = () => {
+const SubHeader = ({ title = "Selected Works", linkTo = "/design" }) => {
   return (
-    <header className=" flex justify-between p-5 mt-24  w-full">
-      <h1 className=" font-satoshi text-accent-color text-2xl lg:text-5xl ">
-        Selected Works
-      </h1>
-
-      <Button> See more</Button>
-    </header>
+    <div className="flex justify-between items-end mb-10">
+      <h2
+        className="font-gambetta text-accent-color"
+        style={{
+          fontSize: "clamp(2rem, 4vw, 3.5rem)",
+          fontVariationSettings: '"wght" 300',
+        }}
+      >
+        {title}
+      </h2>
+      <Link to={linkTo}>
+        <Button>See all</Button>
+      </Link>
+    </div>
   );
 };
 

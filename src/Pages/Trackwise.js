@@ -1,191 +1,162 @@
 import React from "react";
-import HeaderComp from "../Components/HeaderComp";
-import Footer from "../Footer";
+import { motion } from "framer-motion";
+import CaseStudyShell from "../v2/CaseStudyShell";
 import header from "../images/header.jpg";
 import tr1 from "../images/tr1.jpg";
 import tr2 from "../images/tr2.jpg";
 import tr3 from "../images/tr3.jpg";
 import tr4 from "../images/tr4.jpg";
 import main from "../images/Main.mp4";
-const Trackwise = () => {
-  return (
-    <div>
-      <HeaderComp>Trackwise NFC</HeaderComp>
-      <main className="container p-5 max-w-screen-2xl">
-        <div>
-          <img src={header} alt="placeholder" />
-        </div>
-        <div className="divide-y divide-accent-color/30 p-4 ">
-          <div className="w-full py-14">
-            <div className="lg:flex justify-between">
-              <h1 className="font-satoshi uppercase tracking-widest py-3 text-accent-color">
-                BACKGROUND
-              </h1>
-              <div className="w-full lg:w-2/3">
-                <p className="font-satoshi text-base text-accent-color">
-                  Attendance is important for student success. Students who
-                  attend school regularly are more likely to achieve
-                  academically, graduate from high school, and go on to college.
-                  However, many students struggle to attend school regularly due
-                  to a variety of factors. <br /> Traditional attendance
-                  tracking methods are inefficient and inaccurate. Paper
-                  attendance sheets are time-consuming to collect and can be
-                  easily lost or damaged. In addition, they do not provide
-                  real-time data on attendance, which makes it difficult to
-                  identify and address attendance problems early on. <br />
-                  <br />
-                  Our project proposes to use NFC technology to improve
-                  attendance tracking. NFC technology allows devices to
-                  communicate with each other over short distances. This makes
-                  it ideal for tracking attendance, as students can simply tap
-                  their ID cards on a reader to mark their attendance. Our
-                  system would have a number of advantages over traditional
-                  attendance tracking methods. It would be more efficient,
-                  accurate, and secure. It would also provide real-time data on
-                  attendance, which would make it easier to identify and address
-                  attendance problems early on.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="w-full py-14">
-            <div className="lg:flex justify-between">
-              <h1 className="font-satoshi uppercase tracking-widest py-3 text-accent-color">
-                THE Problem
-              </h1>
-              <div className="w-full lg:w-2/3">
-                <p className="font-satoshi text-base text-accent-color">
-                  A decline in student attendance as well as an appropriate
-                  method of recording student attendance without the issue of
-                  students entering attendance for colleagues who are not in
-                  class. According to certain lecturers and teaching assistants,
-                  student attendance lists frequently become mixed up with other
-                  papers, or the number of students on the lists exceeds the
-                  number of students currently enrolled in the class. <br />
-                  <br /> In certain circumstances, only a few students show up
-                  for lectures, which is cause for alarm. Because regular
-                  attendance increases a student's chances of academic success,
-                  the attendance rate is crucial. If a significant portion of
-                  the class is consistently absent, it is challenging for the
-                  lecturer and the class to advance and develop their skills.
-                  Our objective is to create a system that can reliably manage
-                  student attendance while also giving lecturers a convenient
-                  way to monitor the attendance lists. By using this technique,
-                  we intend to improve attendance tracking and increase the
-                  number of students who show up for class.
-                </p>
-              </div>
-            </div>
-          </div>
 
-          <div className="w-full py-14">
-            <div className="lg:flex justify-between">
-              <h1 className="font-satoshi uppercase tracking-widest py-4 text-accent-color">
-                Aims & Objectives
-              </h1>
-              <div className="lg:w-2/3">
-                <div className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 gap-4 justify-center  max-w-screen-2xl container">
-                  <div className="bg-secondary-bg p-4 border border-accent-color/25  hover:border-accent-color/75 ease-in">
-                    <p className="font-satoshi tracking-wide text-base leading-7 text-accent-color">
-                      Create an NFC-based attendance app for schools that
-                      automates attendance recording.
-                    </p>
-                  </div>
-                  <div className="bg-secondary-bg p-4  border border-accent-color/25 hover:border-accent-color/75 ease-in">
-                    <p className="font-satoshi tracking-wide text-base leading-7 text-accent-color">
-                      Ensure 90% accuracy in attendance tracking, reducing
-                      errors and unauthorized registrations.
-                    </p>
-                  </div>
-                  <div className="bg-secondary-bg p-4  border border-accent-color/25 hover:border-accent-color/75">
-                    <p className="font-satoshi tracking-wide text-base leading-7 text-accent-color">
-                      Ensure app compatibility with diverse NFC-enabled devices
-                      used by students and can be adopted by both students and
-                      faculty.
-                    </p>
-                  </div>
-                  <div className="bg-secondary-bg p-4  border border-accent-color/25 hover:border-accent-color/75">
-                    <p className="font-satoshi tracking-wide text-base leading-7 text-accent-color">
-                      Increase student attendance by promoting NFC app usage.
-                      Develop, test, and integrate the app within the semester.
-                    </p>
-                  </div>
-                  <div className="bg-secondary-bg p-4  border border-accent-color/25 hover:border-accent-color/75">
-                    <p className="font-satoshi tracking-wide text-base leading-7 text-accent-color">
-                      Integrate the app with the existing student ID system to
-                      ensure a smooth transition from manual attendance methods
-                      to the NFC-based app.
-                    </p>
-                  </div>
-                  <div className="bg-secondary-bg p-4  border border-accent-color/25 hover:border-accent-color/75">
-                    <p className="font-satoshi tracking-wide text-base leading-7 text-accent-color">
-                      Utilize NFC-enabled devices for real-time tracking and
-                      accurate storage of student attendance data.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-full py-14">
-            <div className="lg:flex justify-between">
-              <h1 className="font-satoshi uppercase tracking-widest py-3 text-accent-color">
-                THE SOLUTION
-              </h1>
-              <div className="lg:w-2/3">
-                <p className="font-satoshi text-base text-accent-color">
-                  Trackwise provides a comprehensive replacement for paper
-                  attendance records, offering a more robust and efficient
-                  system to track and manage student attendance records. The
-                  shift to NFC technology streamlines the entire process,
-                  enhancing efficiency and accuracy. <br />
-                  <br />
-                  Emphasizing the practicality of daily device usage,
-                  "Trackwise" seamlessly integrates with students' personal
-                  mobile devices, eliminating the hassle of carrying additional
-                  identification cards. Through this seamless integration,
-                  students can effortlessly register attendance and conveniently
-                  keep track of all attended lectures throughout the semester.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+/* Layout: CASE STUDY NARRATIVE
+   Split hero with image right, numbered vertical sections for each
+   content block, image grid, video demo as full-width closer. */
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4  container ">
-          <div className=" bg-secondary-bg/70 ">
-            <img src={tr1} className=" object-cover " alt="design1" />
-          </div>
-          <div className=" bg-secondary-bg/70  ">
-            <img src={tr2} className=" object-cover " alt="design2" />
-          </div>
-          <div className=" bg-secondary-bg/70 ">
-            <img src={tr3} className=" object-cover " alt="design3" />
-          </div>
-          <div className=" bg-secondary-bg/70 ">
-            <img src={tr4} className=" object-cover " alt="design4" />
-          </div>
+const fade = {
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+};
+
+const Section = ({ number, title, children }) => (
+  <motion.div
+    className="grid grid-cols-1 lg:grid-cols-12 gap-8 py-16"
+    style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}
+    {...fade}
+  >
+    <div className="lg:col-span-4 flex gap-5 items-start">
+      <span className="font-mono text-[10px] tracking-widest mt-1 shrink-0" style={{ color: "#333" }}>{number}</span>
+      <p className="font-mono text-[10px] uppercase tracking-[0.2em]" style={{ color: "#6757d4" }}>{title}</p>
+    </div>
+    <div className="lg:col-span-7">{children}</div>
+  </motion.div>
+);
+
+const Trackwise = () => (
+  <CaseStudyShell
+    prev={{ to: "/design/baron", label: "Baron Property" }}
+    next={null}
+  >
+    {/* HERO - split */}
+    <section className="pt-[64px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[90dvh]">
+        <div className="flex flex-col justify-end p-10 lg:p-16 pb-16">
+          <motion.p
+            className="font-mono text-[11px] uppercase tracking-[0.22em] mb-6"
+            style={{ color: "#6757d4" }}
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}
+          >
+            Product Design / 2024
+          </motion.p>
+          <motion.h1
+            className="font-grotesk leading-none tracking-tight"
+            style={{ fontSize: "clamp(3.5rem, 7vw, 8rem)", fontWeight: 700, color: "#ebebeb" }}
+            initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          >
+            Track<br />
+            <span style={{ color: "#6757d4" }}>wise.</span>
+          </motion.h1>
+          <motion.p
+            className="font-grotesk mt-8 leading-relaxed max-w-[42ch]"
+            style={{ color: "#555", fontWeight: 300, fontSize: "0.95rem" }}
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
+            NFC-based attendance tracking for tertiary institutions. Final year project, University of Ghana.
+          </motion.p>
         </div>
-        <div className="flex flex-col justify-center items-center w-max-screen-2xl w-full">
-          <div className="p-14 md:p-24">
-            <p className="font-satoshi text-3xl md:text-8xl text-accent-color  ">
-              Project Demo
-            </p>
-          </div>
+        <motion.div
+          className="overflow-hidden"
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.1 }}
+        >
+          <img src={header} alt="Trackwise app" className="w-full h-full object-cover" style={{ minHeight: 480 }} />
+        </motion.div>
+      </div>
+    </section>
+
+    {/* NARRATIVE SECTIONS */}
+    <div className="v2-section">
+      <Section number="01" title="Background">
+        <p className="font-grotesk leading-relaxed" style={{ color: "#888", fontWeight: 300, fontSize: "0.95rem" }}>
+          Students who attend class regularly are significantly more likely to achieve academically. Yet traditional paper attendance sheets are slow, error-prone, and give lecturers no real-time visibility into who's present. Sheets get lost, mixed with other papers, or manipulated entirely.
+        </p>
+        <p className="font-grotesk leading-relaxed mt-4" style={{ color: "#888", fontWeight: 300, fontSize: "0.95rem" }}>
+          NFC technology offers a clean alternative: students tap their device on a reader to register attendance instantly. No paper, no delays, no room for proxy sign-ins.
+        </p>
+      </Section>
+
+      <Section number="02" title="The Problem">
+        <p className="font-grotesk leading-relaxed" style={{ color: "#888", fontWeight: 300, fontSize: "0.95rem" }}>
+          Attendance lists frequently get mixed with other documents. In some cases, students sign in for absent colleagues, undermining the data entirely. Lecturers had no reliable way to identify attendance patterns early enough to intervene. The existing system failed both staff and students.
+        </p>
+      </Section>
+
+      <Section number="03" title="Objectives">
+        <div className="space-y-0">
+          {[
+            "NFC-based app that automates attendance recording",
+            "90% accuracy in tracking, eliminating proxy sign-ins",
+            "Works with students' existing NFC-enabled mobile devices",
+            "Real-time data accessible to lecturers during class",
+            "Integrated with the existing student ID system",
+            "Tested and deployed within a single semester",
+          ].map((obj, i) => (
+            <div
+              key={i}
+              className="flex items-start gap-4 py-3"
+              style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}
+            >
+              <span className="font-mono text-[9px] tracking-widest shrink-0 mt-0.5" style={{ color: "#333" }}>
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <p className="font-grotesk text-sm" style={{ color: "#ebebeb", fontWeight: 300 }}>{obj}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section number="04" title="The Solution">
+        <p className="font-grotesk leading-relaxed" style={{ color: "#888", fontWeight: 300, fontSize: "0.95rem" }}>
+          Trackwise replaces paper records entirely with a clean mobile app. Students tap their device on an NFC reader at the classroom door. The system logs attendance instantly and surfaces it in a real-time dashboard for lecturers. No cards, no paper, no manual counting.
+        </p>
+        <p className="font-grotesk leading-relaxed mt-4" style={{ color: "#888", fontWeight: 300, fontSize: "0.95rem" }}>
+          The interface is designed to work on the first tap without onboarding friction, using the student ID infrastructure already in place at the university.
+        </p>
+      </Section>
+    </div>
+
+    {/* SCREEN GRID */}
+    <section className="v2-section py-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {[tr1, tr2, tr3, tr4].map((img, i) => (
+          <motion.div key={i} className="overflow-hidden" {...fade} transition={{ duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}>
+            <img src={img} alt={`Trackwise screen ${i + 1}`} className="w-full object-cover" style={{ height: 380 }} />
+          </motion.div>
+        ))}
+      </div>
+    </section>
+
+    {/* VIDEO DEMO */}
+    <section className="v2-section pb-24">
+      <motion.div {...fade}>
+        <p className="font-mono text-[10px] uppercase tracking-[0.22em] mb-6" style={{ color: "#6757d4" }}>Project Demo</p>
+        <div style={{ border: "1px solid rgba(255,255,255,0.06)", overflow: "hidden" }}>
           <video
             controls
-            autostart
             autoPlay
+            muted
+            loop
             src={main}
-            type="video/mp4"
-            width="1200"
+            className="w-full"
+            style={{ maxHeight: "85vh", display: "block", backgroundColor: "#111" }}
           />
         </div>
-      </main>
-
-      <Footer />
-    </div>
-  );
-};
+      </motion.div>
+    </section>
+  </CaseStudyShell>
+);
 
 export default Trackwise;

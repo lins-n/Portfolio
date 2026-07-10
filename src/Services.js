@@ -1,59 +1,97 @@
 import React from "react";
-import Button from "./Button";
 import { motion } from "framer-motion";
+import { GoArrowUpRight } from "react-icons/go";
+
+const services = [
+  {
+    num: "01",
+    title: "Graphic Design",
+    desc: "Brand identities, logos, and visual systems that communicate with clarity and confidence.",
+    href: "#design",
+  },
+  {
+    num: "02",
+    title: "UI/UX Design",
+    desc: "Interfaces for mobile apps and websites that are intuitive, refined, and built to convert.",
+    href: "#ui",
+  },
+  {
+    num: "03",
+    title: "Development",
+    desc: "Clean, performant web experiences - from concept to code, built to last.",
+    href: null,
+  },
+];
 
 const Services = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 75 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
-      id="services"
-      className="grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 gap-4 p-6 justify-center  max-w-screen-2xl container"
-    >
-      <div className="bg-secondary-bg p-10 border border-accent-color/25  hover:border-accent-color/75 ease-in">
-        <p className="font-satoshi text-accent-color">01</p>
-        <h1 className="text-xl font-satoshi uppercase tracking-widest text-accent-color font-bold">
-          Graphic Design
-        </h1>
-        <p className="font-satoshi tracking-wide py-4 text-base md:text-lg leading-7 text-accent-color">
-          Elevate your brand with captivating visuals. As a graphic designer, I
-          specialize in crafting stunning logos, flyers, and more
+    <section id="services" className="max-w-screen-xl mx-auto px-6 lg:px-12 py-24 lg:py-32">
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        viewport={{ once: true }}
+      >
+        <p
+          className="font-satoshi text-accent-color/40 text-xs uppercase tracking-[0.2em] mb-12"
+          style={{ fontVariationSettings: '"wght" 400' }}
+        >
+          What I do
         </p>
-        <a href="#design">
-          <Button> projects</Button>
-        </a>
+      </motion.div>
+
+      <div className="border-t border-accent-color/15">
+        {services.map((service, i) => (
+          <motion.div
+            key={service.num}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+          >
+            {service.href ? (
+              <a href={service.href} className="block group">
+                <ServiceRow service={service} />
+              </a>
+            ) : (
+              <div className="group">
+                <ServiceRow service={service} />
+              </div>
+            )}
+          </motion.div>
+        ))}
       </div>
-      <div className="bg-secondary-bg p-10  border border-accent-color/25 hover:border-accent-color/75 ease-in">
-        <p className="font-satoshi text-accent-color">02</p>
-        <h1 className="text-xl font-satoshi uppercase tracking-widest text-accent-color font-bold">
-          UI/UX Design
-        </h1>
-        <p className="font-satoshi tracking-wide py-4 text-base md:text-lg leading-7 text-accent-color">
-          I focus on crafting captivating interfaces for mobile apps, websites
-          and more.Transforming ideas into seamless user experiences.
-        </p>
-        <a href="#ui" className="transition duration-800 ease-in-out">
-          <Button> projects</Button>
-        </a>
-      </div>
-      <div className="bg-secondary-bg p-10  border border-accent-color/25 hover:border-accent-color/75">
-        <p className="font-satoshi text-accent-color">03</p>
-        <h1 className="text-xl font-satoshi uppercase tracking-widest text-accent-color font-bold">
-          Development
-        </h1>
-        <p className="font-satoshi tracking-wide py-4 text-base md:text-lg leading-7 text-accent-color">
-          Crafting dynamic digital experiences through expert development.
-          Transforming ideas into innovative solutions that leave a lasting
-          impact.
-        </p>
-        <a>
-          <Button> Projects</Button>
-        </a>
-      </div>
-    </motion.div>
+    </section>
   );
 };
+
+const ServiceRow = ({ service }) => (
+  <div className="grid grid-cols-12 gap-4 py-8 lg:py-10 border-b border-accent-color/15 items-center group-hover:border-accent-color/30 transition-colors duration-300">
+    <span
+      className="col-span-2 lg:col-span-1 font-satoshi text-accent-color/30 text-sm"
+      style={{ fontVariationSettings: '"wght" 300' }}
+    >
+      {service.num}
+    </span>
+    <h3
+      className="col-span-10 lg:col-span-4 font-satoshi text-accent-color text-xl lg:text-2xl group-hover:text-accent-color/80 transition-colors duration-200"
+      style={{ fontVariationSettings: '"wght" 600' }}
+    >
+      {service.title}
+    </h3>
+    <p
+      className="col-span-12 lg:col-span-6 font-satoshi text-accent-color/50 text-base leading-relaxed lg:pl-4"
+      style={{ fontVariationSettings: '"wght" 300' }}
+    >
+      {service.desc}
+    </p>
+    <div className="hidden lg:flex col-span-1 justify-end">
+      <GoArrowUpRight
+        size={20}
+        className="text-accent-color/20 group-hover:text-accent-color group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200"
+      />
+    </div>
+  </div>
+);
 
 export default Services;

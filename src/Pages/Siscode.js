@@ -1,115 +1,120 @@
 import React from "react";
-import HeaderComp from "../Components/HeaderComp";
-import Footer from "../Footer";
+import { motion } from "framer-motion";
+import CaseStudyShell from "../v2/CaseStudyShell";
+import siscode from "../images/siscode1.jpg";
 import design from "../images/Design.jpg";
 import mainD from "../images/Main - dark.jpg";
 import mock3 from "../images/mock3.jpg";
 import mock1 from "../images/mock1.jpg";
-import siscode from "../images/siscode1.jpg";
-const Siscode = () => {
-  return (
-    <div>
-      <HeaderComp>
-        Siscode
-        <br />
-        <span className="font-gambetta italic text-accent-color">
-          Logo Design
-        </span>
-      </HeaderComp>
-      <main className="container p-5 max-w-screen-2xl">
-        <div>
-          <img src={siscode} alt="placeholder" />
-        </div>
-        <div className="divide-y divide-accent-color/30 py-14 ">
-          <div className="w-full py-14">
-            <div className="lg:flex justify-between">
-              <h1 className="font-satoshi uppercase tracking-widest py-3 text-accent-color">
-                THE BRIEF
-              </h1>
-              <div className="w-full lg:w-2/3">
-                <p className="font-satoshi text-base  text-accent-color">
-                  Digital (IT and Coding) Literacy For Young Underpriviledged
-                  Girls
-                  <br />
-                  Empower african females and the youth to be competitive
-                  globally
-                  <br />
-                  Give the business a professional global appeal.
-                  <br />
-                  Youth centric, Modern, Fresh, Quick and Impactful.
-                </p>
-              </div>
-            </div>
-          </div>
 
-          <div className="w-full py-14">
-            <div className="lg:flex justify-between">
-              <h1 className="font-satoshi uppercase tracking-widest py-3 text-accent-color">
-                THE SOLUTION
-              </h1>
-              <div className="lg:w-2/3">
-                <p className="font-satoshi text-base text-accent-color">
-                  The logo solution aims to encapsulate the essence of digital
-                  literacy for young underprivileged girls in Africa while
-                  projecting a professional global appeal. It features a modern,
-                  stylized globe symbolizing global competitiveness and
-                  connectivity. The typography is clean and modern, ensuring
-                  readability and a contemporary feel. Overall, the logo exudes
-                  a sense of modernity, youthfulness, and professionalism,
-                  embodying the mission to empower African females and youth in
-                  the digital age.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="w-full py-14">
-            <div className="lg:flex justify-between">
-              <h1 className="font-satoshi uppercase tracking-widest py-3 text-accent-color">
-                TESTIMONIAL
-              </h1>
-              <div className="lg:w-2/3">
-                <p className="font-gambetta italic text-base text-accent-color">
-                  " I had the pleasure of working with Collins on the logo
-                  project and was blown away by his expertise and
-                  professionalism. He made the process seamless and delivered a
-                  logo that exceeded our expectations. I highly recommend
-                  Collins for all your design needs."
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+/* Layout: KINETIC TYPE HERO
+   Giant title bleeds to the right edge, full-bleed cover image,
+   split brief/solution columns, pulled testimonial quote, image grid. */
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4  mb-32 container ">
-          <div className=" bg-secondary-bg/70 ">
-            <img
-              src={design}
-              className=" object-cover "
-              alt="siscode design1"
-            />
-          </div>
-          <div className=" bg-secondary-bg/70  ">
-            <img src={mainD} className=" object-cover " alt="siscode design2" />
-          </div>
-          <div className=" bg-secondary-bg/70 ">
-            <img src={mock3} className=" object-cover " alt="siscode design3" />
-          </div>
-          <div
-            style={{
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              height: 450,
-            }}
-          >
-            <img src={mock1} className=" object-cover " alt="siscode design4" />
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </div>
-  );
+const fade = {
+  initial: { opacity: 0, y: 28 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
 };
+
+const Siscode = () => (
+  <CaseStudyShell
+    prev={{ to: "/ui/piktr", label: "Piktr" }}
+    next={{ to: "/ui/bitsy", label: "Bitsy App" }}
+  >
+    {/* HERO - oversized type */}
+    <section className="pt-[64px] overflow-hidden">
+      <div className="v2-section pt-16 pb-8">
+        <motion.p
+          className="font-mono text-[11px] uppercase tracking-[0.22em] mb-6"
+          style={{ color: "#6757d4" }}
+          {...fade}
+        >
+          Brand Identity / 2024
+        </motion.p>
+        <motion.h1
+          className="font-grotesk leading-none tracking-tight"
+          style={{
+            fontSize: "clamp(5rem, 16vw, 14rem)",
+            fontWeight: 700,
+            color: "#ebebeb",
+            marginLeft: "-0.04em",
+          }}
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+        >
+          Siscode
+          <br />
+          <span style={{ color: "#6757d4" }}>Gh.</span>
+        </motion.h1>
+      </div>
+
+      {/* Full-bleed cover */}
+      <motion.div
+        initial={{ opacity: 0, scale: 1.03 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <img src={siscode} alt="Siscode brand identity" className="w-full object-cover" style={{ maxHeight: "80vh" }} />
+      </motion.div>
+    </section>
+
+    {/* BRIEF + SOLUTION - two columns */}
+    <section className="v2-section py-24 lg:py-32">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+        <motion.div {...fade}>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] mb-5" style={{ color: "#6757d4" }}>The Brief</p>
+          <p className="font-grotesk leading-relaxed" style={{ color: "#888", fontWeight: 300, fontSize: "1rem" }}>
+            Siscode Gh needed a visual identity that communicated digital and coding literacy for young underprivileged girls in Africa. The brand had to feel modern and global while remaining youth-centric and fresh. It needed to project professional credibility on the international stage while staying accessible and energetic for its core audience.
+          </p>
+        </motion.div>
+        <motion.div {...fade} transition={{ duration: 0.7, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] mb-5" style={{ color: "#6757d4" }}>The Solution</p>
+          <p className="font-grotesk leading-relaxed" style={{ color: "#888", fontWeight: 300, fontSize: "1rem" }}>
+            The logo system centers on a modern stylized globe that speaks to global connectivity and ambition. Clean, contemporary typography reinforces readability and a professional tone. The full identity balances youthful energy with polish, positioning Siscode Gh as a credible tech education brand that empowers African females and youth to compete on the world stage.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+
+    {/* TESTIMONIAL - large pulled quote */}
+    <section
+      className="v2-section py-20"
+      style={{ borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}
+    >
+      <motion.blockquote {...fade} className="max-w-[800px]">
+        <p
+          className="font-grotesk leading-snug mb-8"
+          style={{ fontSize: "clamp(1.4rem, 3vw, 2.4rem)", fontWeight: 400, color: "#ebebeb", fontStyle: "italic" }}
+        >
+          "Collins made the process seamless and delivered a logo that exceeded our expectations. His expertise and professionalism were evident from the very first conversation."
+        </p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.2em]" style={{ color: "#555" }}>
+          Siscode Gh - Client
+        </p>
+      </motion.blockquote>
+    </section>
+
+    {/* IMAGE GRID - asymmetric */}
+    <section className="v2-section py-24">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <motion.div className="lg:col-span-7 overflow-hidden" {...fade}>
+          <img src={design} alt="Siscode design" className="w-full h-full object-cover" style={{ maxHeight: 520 }} />
+        </motion.div>
+        <motion.div className="lg:col-span-5 overflow-hidden" {...fade} transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}>
+          <img src={mainD} alt="Siscode dark" className="w-full h-full object-cover" style={{ maxHeight: 520 }} />
+        </motion.div>
+        <motion.div className="lg:col-span-5 overflow-hidden" {...fade} transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}>
+          <img src={mock3} alt="Siscode mockup" className="w-full h-full object-cover" style={{ maxHeight: 420 }} />
+        </motion.div>
+        <motion.div className="lg:col-span-7 overflow-hidden" {...fade} transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>
+          <img src={mock1} alt="Siscode mockup 2" className="w-full h-full object-cover" style={{ maxHeight: 420 }} />
+        </motion.div>
+      </div>
+    </section>
+  </CaseStudyShell>
+);
 
 export default Siscode;

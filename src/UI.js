@@ -1,123 +1,115 @@
 import React from "react";
-import MidHeader from "./MidHeader";
 import { motion } from "framer-motion";
-import itFitss from "./images/itFitss.gif";
+import { Link } from "react-router-dom";
 import bits from "./images/bits.jpg";
 import rendell from "./images/Rendell.jpg";
-import { Link } from "react-router-dom";
+import itFitss from "./images/itFitss.gif";
 import intro from "./images/intro.gif";
+
+const UICard = ({ img, title, category, height, alt }) => (
+  <div className={`relative overflow-hidden ${height} w-full group cursor-pointer`}>
+    <div
+      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+      style={{ backgroundImage: `url(${img})` }}
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-main-background/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+    <div className="absolute bottom-0 left-0 right-0 p-5 flex justify-between items-end translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+      <p
+        className="font-satoshi text-accent-color text-sm uppercase tracking-widest"
+        style={{ fontVariationSettings: '"wght" 600' }}
+      >
+        {title}
+      </p>
+      <p
+        className="font-satoshi text-accent-color/60 text-xs uppercase tracking-widest"
+        style={{ fontVariationSettings: '"wght" 300' }}
+      >
+        {category}
+      </p>
+    </div>
+  </div>
+);
+
+const CardLabel = ({ title, category }) => (
+  <div className="flex justify-between items-center px-1 mt-3">
+    <p
+      className="font-satoshi text-accent-color/80 text-sm"
+      style={{ fontVariationSettings: '"wght" 500' }}
+    >
+      {title}
+    </p>
+    <p
+      className="font-satoshi text-accent-color/40 text-xs uppercase tracking-widest"
+      style={{ fontVariationSettings: '"wght" 300' }}
+    >
+      {category}
+    </p>
+  </div>
+);
 
 const UI = () => {
   return (
-    <main className="max-w-screen-2xl container" id="ui">
+    <section id="ui" className="max-w-screen-xl mx-auto px-6 lg:px-12 py-24 lg:py-32">
       <motion.div
-        initial={{ opacity: 0, y: 75 }}
+        initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         viewport={{ once: true }}
+        className="mb-10"
       >
-        <MidHeader>
-          UI/UX{" "}
-          <span className=" font-gambetta italic text-accent-color">
-            Projects
-          </span>
-        </MidHeader>
+        <h2
+          className="font-gambetta text-accent-color"
+          style={{
+            fontSize: "clamp(2rem, 4vw, 3.5rem)",
+            fontVariationSettings: '"wght" 300',
+          }}
+        >
+          UI/UX Projects
+        </h2>
       </motion.div>
+
+      {/* Top: left large (6) + right stacked (6) */}
       <motion.div
-        className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 gap-4 p-4 justify-center w-full "
-        initial={{ opacity: 0, y: 75 }}
+        className="grid grid-cols-1 lg:grid-cols-12 gap-3 mb-3"
+        initial={{ opacity: 0, y: 28 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         viewport={{ once: true }}
       >
-        <Link to="/ui/bitsy">
-          <div
-            style={{
-              backgroundImage: `url(${bits})`,
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              height: 450,
-            }}
-            className="relative "
-          >
-            <div className="bg-secondary-bg/50 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
-              <p className="tracking-widest font-satoshi text-accent-color font-bold">
-                BITSY
-              </p>
-              <p className="tracking-widest font-satoshi text-accent-color">
-                UI DESIGN
-              </p>
-            </div>
-          </div>
-        </Link>
+        {/* Bitsy - large left */}
+        <div className="lg:col-span-6">
+          <Link to="/ui/bitsy">
+            <UICard img={bits} title="Bitsy" category="UI Design" height="h-[490px]" />
+            <CardLabel title="Bitsy App" category="UI Design" />
+          </Link>
+        </div>
 
-        <Link to="/ui/rendells">
-          <div
-            style={{
-              backgroundImage: `url(${rendell})`,
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              height: 450,
-            }}
-            className="relative"
-          >
-            <div className="bg-secondary-bg/30 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
-              <p className="tracking-widest font-satoshi text-accent-color uppercase font-bold">
-                Rendells website
-              </p>
-              <p className="tracking-widest font-satoshi text-accent-color">
-                UI DESIGN
-              </p>
-            </div>
-          </div>
-        </Link>
+        {/* Right: Rendells + ItFits stacked */}
+        <div className="lg:col-span-6 flex flex-col gap-3">
+          <Link to="/ui/rendells">
+            <UICard img={rendell} title="Rendells" category="UI Design" height="h-[234px]" />
+            <CardLabel title="Rendells Website" category="UI Design" />
+          </Link>
+          <Link to="/ui/itfits">
+            <UICard img={itFitss} title="ItFits" category="UI Design" height="h-[234px]" />
+            <CardLabel title="ItFits App" category="UI Design" />
+          </Link>
+        </div>
+      </motion.div>
 
-        <Link to="/ui/itfits">
-          <div
-            style={{
-              backgroundImage: `url(${itFitss})`,
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              height: 450,
-            }}
-            className="relative"
-          >
-            <div className="bg-secondary-bg/60 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
-              <p className="tracking-widest font-satoshi text-accent-color font-bold">
-                ITFITS APP
-              </p>
-              <p className="tracking-widest font-satoshi text-accent-color">
-                UI DESIGN
-              </p>
-            </div>
-          </div>
-        </Link>
+      {/* Bottom: Trackwise full width */}
+      <motion.div
+        initial={{ opacity: 0, y: 28 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+        viewport={{ once: true }}
+      >
         <Link to="/ui/trackwise">
-          <div
-            style={{
-              backgroundImage: `url(${intro})`,
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              height: 450,
-            }}
-            className="relative"
-          >
-            <div className="bg-secondary-bg/60 backdrop-blur-lg flex border absolute inset-x-0 bottom-0 border-accent-color/50 justify-between m-6 p-4 s ">
-              <p className="tracking-widest font-satoshi text-accent-color font-bold">
-                FINAL YEAR PROJECT
-              </p>
-              <p className="tracking-widest font-satoshi text-accent-color">
-                UI DESIGN
-              </p>
-            </div>
-          </div>
+          <UICard img={intro} title="Final Year Project" category="UI Design" height="h-[280px]" />
+          <CardLabel title="Trackwise" category="UI Design" />
         </Link>
       </motion.div>
-    </main>
+    </section>
   );
 };
 

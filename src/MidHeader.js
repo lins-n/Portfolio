@@ -1,14 +1,16 @@
 import React from "react";
-import { useState } from "react";
 
-const MidHeader = (props) => {
-  const { children } = props;
+const MidHeader = ({ children }) => {
   return (
-    <header className=" flex flex-col w-full justify-center my-10 md:my-32 text-4xl lg:text-8xl md:text-6xl sm:text-6xl items-center p-4">
-      <p className=" font-satoshi text-accent-color mb-2 text-center">
-        {children}{" "}
-      </p>
-    </header>
+    <h2
+      className="font-gambetta text-accent-color mb-10"
+      style={{
+        fontSize: "clamp(2rem, 4vw, 3.5rem)",
+        fontVariationSettings: '"wght" 300',
+      }}
+    >
+      {children}
+    </h2>
   );
 };
 

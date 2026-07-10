@@ -1,5 +1,5 @@
 import React from "react";
-import CTA from "../CTA";
+
 import { motion } from "framer-motion";
 
 const HeaderComp = (props) => {

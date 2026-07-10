@@ -1,36 +1,38 @@
-import Nav from "./Nav";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import DesignProject from "./Pages/DesignProject";
+import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Siscode from "./Pages/Siscode";
-import Bitsy from "./Pages/Bitsy";
-import Sporty from "./Pages/Sporty";
-import Trackwise from "./Pages/Trackwise";
-import ItFits from "./Pages/ItFits";
-import Rendells from "./Pages/Rendells";
-import Baron from "./Pages/Baron";
+import V2App from "./v2/V2App";
 import ScrollToTop from "./ScrollToTop";
+
+const DesignProject = lazy(() => import("./Pages/DesignProject"));
+const Piktr         = lazy(() => import("./Pages/Piktr"));
+const Photography   = lazy(() => import("./Pages/Photography"));
+const Siscode       = lazy(() => import("./Pages/Siscode"));
+const Bitsy         = lazy(() => import("./Pages/Bitsy"));
+const Sporty        = lazy(() => import("./Pages/Sporty"));
+const Trackwise     = lazy(() => import("./Pages/Trackwise"));
+const ItFits        = lazy(() => import("./Pages/ItFits"));
+const Rendells      = lazy(() => import("./Pages/Rendells"));
+const Baron         = lazy(() => import("./Pages/Baron"));
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div>
-        <Nav />
+      <Suspense fallback={<div style={{ background: "#0c0c0c", minHeight: "100vh" }} />}>
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/design" element={<DesignProject />} />
-          <Route path="/design/siscode" element={<Siscode />} />
-          <Route path="design/sporty" element={<Sporty />} />
-          <Route path="design/baron" element={<Baron />} />
-          <Route path="ui/trackwise" element={<Trackwise />} />
-          <Route path="ui/itfits" element={<ItFits />} />
-          <Route path="ui/rendells" element={<Rendells />} />
-          <Route path="ui/bitsy" element={<Bitsy />} />
+          <Route path="/"                element={<V2App />} />
+          <Route path="/design"          element={<DesignProject />} />
+          <Route path="ui/piktr"         element={<Piktr />} />
+          <Route path="/photography"     element={<Photography />} />
+          <Route path="/design/siscode"  element={<Siscode />} />
+          <Route path="design/sporty"    element={<Sporty />} />
+          <Route path="design/baron"     element={<Baron />} />
+          <Route path="ui/trackwise"     element={<Trackwise />} />
+          <Route path="ui/itfits"        element={<ItFits />} />
+          <Route path="ui/rendells"      element={<Rendells />} />
+          <Route path="ui/bitsy"         element={<Bitsy />} />
         </Routes>
-      </div>
+      </Suspense>
     </Router>
   );
 }

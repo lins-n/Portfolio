@@ -1,148 +1,157 @@
 import React from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
-import bgg from "./images/bgg.png";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className=" mt-32 lg:mt-44 ">
-      <section className=" bg-secondary-bg/30 w-full">
-        <div className="relative w-full overflow-hidden h-full ">
-          <img
-            src={bgg}
-            style={{
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              opacity: 0.5,
-              width: "100%",
-            }}
-            className="absolute h-full lg:h-fit "
-          />
-          <div className="w-full grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-3 gap-2 max-w-screen-xl container py-16 relative ">
-            <motion.div
-              initial={{ opacity: 0, y: 75 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
-              className="bg-main-background col-span-2 mr-0 sm:mr-4 p-10 "
-            >
-              <h1 className="text-3xl lg:text-5xl font-gambetta italic text-accent-color  pb-44">
-                Before you go,
-                <br />
-                checkout these other projects
-              </h1>
-              <div className="flex justify-between ">
-                <div>
-                  <ul>
-                    <li className="text-accent-color font-satoshi text-lg hover:font-bold ">
-                      <a href="#">Glossed Logo</a>
-                    </li>
-                    <li className="text-accent-color font-satoshi text-lg hover:font-bold ">
-                      <a href="#">Portfolio Website</a>
-                    </li>
-                    <li className="text-accent-color font-satoshi text-lg  hover:font-bold">
-                      <a href="#">OCS Logo</a>
-                    </li>
-                    <li className="text-accent-color font-satoshi text-lg hover:font-bold">
-                      <a href="#">VRA Logo</a>
-                    </li>
-                  </ul>
-                </div>
+    <footer id="contact" className="border-t border-accent-color/15">
+      <div className="max-w-screen-xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
 
-                <div>
-                  <ul>
-                    <li className="text-accent-color font-satoshi text-lg hover:font-bold text-right">
-                      <a href="#">YawRay Logo</a>
-                    </li>
-                    <li className="text-accent-color font-satoshi text-lg hover:font-bold text-right">
-                      <a href="#">Inventory App</a>
-                    </li>
-                    <li className="text-accent-color font-satoshi text-lg hover:font-bold text-right">
-                      <a href="#">Dryce Laundry</a>
-                    </li>
-                    <li className="text-accent-color font-satoshi text-lg hover:font-bold text-right">
-                      <a href="#">Jenkinson Construction</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 75 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true }}
+          {/* Left: CTA + contact */}
+          <motion.div
+            className="lg:col-span-7"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+          >
+            <h2
+              className="font-gambetta text-accent-color leading-[1.1] mb-8"
+              style={{
+                fontSize: "clamp(2.2rem, 5vw, 4rem)",
+                fontVariationSettings: '"wght" 300',
+              }}
             >
-              <div className="bg-main-background mb-4 p-10 ">
-                <h1 className="text-3xl lg:text-4xl font-gambetta text-accent-color italic pb-8">
-                  Let's work
-                  <br />
-                  together
-                </h1>
-                <div>
-                  <ul>
-                    <li className="text-accent-color font-satoshi text-lg hover:font-bold ">
-                      <Link to="ui/bitsy">
-                        <a>Bitsy App</a>
-                      </Link>
+              Got a project?
+              <br />
+              Let's work together.
+            </h2>
+            <a
+              href="mailto:collinsnudekor@gmail.com"
+              className="font-satoshi text-accent-color/60 hover:text-accent-color transition-colors duration-200 text-base underline underline-offset-4 decoration-accent-color/30 hover:decoration-accent-color"
+              style={{ fontVariationSettings: '"wght" 300' }}
+            >
+              collinsnudekor@gmail.com
+            </a>
+
+            <div className="flex items-center gap-4 mt-10">
+              <a
+                href="https://wa.me/qr/VU6EPX7LP3YTF1"
+                target="_blank"
+                rel="noreferrer"
+                className="font-satoshi text-sm uppercase tracking-widest text-accent-color/50 hover:text-accent-color transition-colors duration-200 border border-accent-color/20 hover:border-accent-color/50 px-5 py-2.5"
+                style={{ fontVariationSettings: '"wght" 400' }}
+              >
+                WhatsApp
+              </a>
+              <a
+                href="https://twitter.com/_lins_n"
+                target="_blank"
+                rel="noreferrer"
+                className="font-satoshi text-sm uppercase tracking-widest text-accent-color/50 hover:text-accent-color transition-colors duration-200 border border-accent-color/20 hover:border-accent-color/50 px-5 py-2.5"
+                style={{ fontVariationSettings: '"wght" 400' }}
+              >
+                Instagram
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Right: Links */}
+          <motion.div
+            className="lg:col-span-5"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+          >
+            <div className="grid grid-cols-2 gap-8">
+              <div>
+                <p
+                  className="font-satoshi text-accent-color/30 text-xs uppercase tracking-[0.2em] mb-5"
+                  style={{ fontVariationSettings: '"wght" 400' }}
+                >
+                  Navigate
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    { label: "Home", href: "/", isLink: true },
+                    { label: "About", href: "/about", isLink: true },
+                    { label: "Work", href: "#services", isLink: false },
+                    { label: "Contact", href: "#contact", isLink: false },
+                  ].map((item) => (
+                    <li key={item.label}>
+                      {item.isLink ? (
+                        <Link
+                          to={item.href}
+                          className="font-satoshi text-accent-color/60 hover:text-accent-color transition-colors duration-200 text-sm"
+                          style={{ fontVariationSettings: '"wght" 300' }}
+                        >
+                          {item.label}
+                        </Link>
+                      ) : (
+                        <a
+                          href={item.href}
+                          className="font-satoshi text-accent-color/60 hover:text-accent-color transition-colors duration-200 text-sm"
+                          style={{ fontVariationSettings: '"wght" 300' }}
+                        >
+                          {item.label}
+                        </a>
+                      )}
                     </li>
-                    <li className="text-accent-color font-satoshi text-lg hover:font-bold">
-                      <Link to="design/siscode">
-                        <a>Siscode</a>
-                      </Link>
-                    </li>
-                    <li className="text-accent-color font-satoshi text-lg hover:font-bold">
-                      <Link to="design/baron">
-                        <a>Barron</a>
-                      </Link>
-                    </li>
-                    <li className="text-accent-color font-satoshi text-lg hover:font-bold">
-                      <Link to="ui/trackwise">
-                        <a>Trackwise</a>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="bg-main-background ">
-                <ul className="flex justify-between p-8 items-center">
-                  <li className="bg-secondary-bg font-satoshi text-lg h-24 w-24 flex justify-center items-center">
-                    <a href="https://wa.me/qr/VU6EPX7LP3YTF1">
-                      <img
-                        src="https://img.icons8.com/ios-filled/50/DAC5A7/whatsapp--v1.png"
-                        alt="whatsapp--v1"
-                      />
-                    </a>
-                  </li>
-                  <li className="bg-secondary-bg font-satoshi text-lg h-24 w-24 flex justify-center items-center">
-                    <a href="https://twitter.com/_lins_n">
-                      <img
-                        src="https://img.icons8.com/ios-glyphs/50/DAC5A7/instagram-circle.png"
-                        alt="instagram-circle"
-                      />
-                    </a>
-                  </li>
-                  <li className="bg-secondary-bg font-satoshi text-lg h-24 w-24 flex justify-center items-center">
-                    <a href="mailto:collinsnudekor@gmail.com">
-                      <img
-                        src="https://img.icons8.com/ios-glyphs/50/DAC5A7/circled-envelope.png"
-                        alt="circled-envelope"
-                      />
-                    </a>
-                  </li>
+                  ))}
                 </ul>
               </div>
-            </motion.div>
-          </div>
-          <div className="bg-main-background flex justify-center items-center w-full p-5 relative ">
-            <p className="text-accent-color font-satoshi text-base  tracking-wide ">
-              Designed by <span className="font-gambetta italic ">Collins</span>{" "}
-              - 2024
-            </p>
-          </div>
+
+              <div>
+                <p
+                  className="font-satoshi text-accent-color/30 text-xs uppercase tracking-[0.2em] mb-5"
+                  style={{ fontVariationSettings: '"wght" 400' }}
+                >
+                  Projects
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    { label: "Siscode", to: "/design/siscode" },
+                    { label: "Bitsy App", to: "/ui/bitsy" },
+                    { label: "Baron", to: "/design/baron" },
+                    { label: "Trackwise", to: "/ui/trackwise" },
+                    { label: "Rendells", to: "/ui/rendells" },
+                  ].map((item) => (
+                    <li key={item.label}>
+                      <Link
+                        to={item.to}
+                        className="font-satoshi text-accent-color/60 hover:text-accent-color transition-colors duration-200 text-sm"
+                        style={{ fontVariationSettings: '"wght" 300' }}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </section>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-accent-color/10">
+        <div className="max-w-screen-xl mx-auto px-6 lg:px-12 py-5 flex justify-between items-center">
+          <p
+            className="font-satoshi text-accent-color/30 text-xs"
+            style={{ fontVariationSettings: '"wght" 300' }}
+          >
+            Collins Nudekor - 2025
+          </p>
+          <p
+            className="font-gambetta text-accent-color/30 text-xs italic"
+            style={{ fontVariationSettings: '"wght" 300' }}
+          >
+            Designed &amp; built by Collins
+          </p>
+        </div>
+      </div>
     </footer>
   );
 };

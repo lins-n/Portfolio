@@ -73,16 +73,16 @@ const DesignProject = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4  container ">
           <div className=" bg-secondary-bg/70 ">
-            <img src={img6} className=" object-cover " />
+            <img src={img6} alt="" className=" object-cover " />
           </div>
           <div className=" bg-secondary-bg/70  ">
-            <img src={img6} className=" object-cover " />
+            <img src={img6} alt="" className=" object-cover " />
           </div>
           <div className=" bg-secondary-bg/70 ">
-            <img src={img6} className=" object-cover " />
+            <img src={img6} alt="" className=" object-cover " />
           </div>
           <div className=" bg-secondary-bg/70 ">
-            <img src={img6} className=" object-cover " />
+            <img src={img6} alt="" className=" object-cover " />
           </div>
         </div>
       </main>
