@@ -23,17 +23,17 @@ const features = [
   {
     index: "01",
     title: "Daily Colour",
-    body: "Every day, a new colour prompt is issued to the community. Users submit one photo that matches the colour of the day — a format that drives both creativity and daily retention.",
+    body: "Every day, a new colour prompt is issued to the community. Users submit one photo that matches the colour of the day, a format that drives both creativity and daily retention.",
   },
   {
     index: "02",
     title: "Day-In-The-Life",
-    body: "DITL lets users document their day in a sequence of photos. It's a continuous story rather than a single moment — designed to build deeper social connection between friends.",
+    body: "DITL lets users document their day in a sequence of photos. It's a continuous story rather than a single moment, designed to build deeper social connection between friends.",
   },
   {
     index: "03",
     title: "Colour Hunt",
-    body: "Groups of friends go on a colour hunt — but each person is assigned a different colour to track down. Everyone submits what they found and sees what the others were hunting. A collaborative challenge where no two searches are the same.",
+    body: "Groups of friends go on a colour hunt, but each person is assigned a different colour to track down. Everyone submits what they found and sees what the others were hunting. A collaborative challenge where no two searches are the same.",
   },
 ];
 
@@ -154,7 +154,7 @@ const Piktr = () => (
           >
             Piktr is a social photography app built around the idea that constraints
             drive creativity. Instead of an open-ended feed, the app gives every
-            user a single daily prompt — a colour — and invites them to submit one
+            user a single daily prompt, a colour, and invites them to submit one
             photo that captures it. The result is a curated, aesthetically coherent
             community feed that rewards intentionality over volume.
           </p>
@@ -171,7 +171,7 @@ const Piktr = () => (
             className="font-grotesk leading-relaxed mt-5"
             style={{ color: "#888", fontWeight: 300, fontSize: "clamp(1rem, 1.5vw, 1.2rem)", lineHeight: 1.7 }}
           >
-            Colour Hunt adds a social layer — each participant in a group is
+            Colour Hunt adds a social layer: each participant in a group is
             assigned a different colour to track down, then submits a photo of
             what they found. Everyone sees what the others were hunting. A
             shared challenge where no two searches are the same.
@@ -239,11 +239,11 @@ const Piktr = () => (
         }}
       >
         {[
-          { src: screen1, alt: "Home — Your Colour for Today" },
-          { src: screen2, alt: "Home — Friends' shots feed" },
-          { src: screen3, alt: "Activities — Colour Hunt and DITL" },
-          { src: screen4, alt: "Day in the Life — hourly timeline" },
-          { src: screen5, alt: "Gallery — photo submissions by date" },
+          { src: screen1, alt: "Home: Your Colour for Today" },
+          { src: screen2, alt: "Home: Friends' shots feed" },
+          { src: screen3, alt: "Activities: Colour Hunt and DITL" },
+          { src: screen4, alt: "Day in the Life: hourly timeline" },
+          { src: screen5, alt: "Gallery: photo submissions by date" },
         ].map((s, i) => (
           <motion.div
             key={i}
@@ -338,7 +338,7 @@ const Piktr = () => (
           className="font-grotesk max-w-[38ch] leading-relaxed"
           style={{ color: "#444", fontWeight: 300, fontSize: "0.9rem" }}
         >
-          Ongoing development — architecture, feature design, and engineering.
+          Ongoing development: architecture, feature design, and engineering.
         </p>
       </motion.div>
     </section>

@@ -78,7 +78,7 @@ const Modena = () => (
 
     {/* ── HERO ── split viewport, pattern textured on left */}
     <section className="grid grid-cols-1 lg:grid-cols-2 min-h-[100dvh] pt-[64px]">
-      {/* Left: text on chalk — pattern sits behind at low opacity */}
+      {/* Left: text on chalk, pattern sits behind at low opacity */}
       <div className="relative flex flex-col justify-end px-10 lg:px-16 pb-16 lg:pb-24 pt-16 lg:pt-0 overflow-hidden">
         {/* Pattern texture */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden>
@@ -235,7 +235,7 @@ const Modena = () => (
             >
               Modena is a contemporary fashion label built on restraint. The
               brief called for an identity that could sit beside established
-              luxury brands without imitating them — something with its own
+              luxury brands without imitating them, something with its own
               quiet authority.
             </p>
             <p
@@ -282,7 +282,7 @@ const Modena = () => (
         <motion.div className="flex justify-center" {...inView}>
           <img
             src={logoMain}
-            alt="Modena logotype — Modern.Timeless.Chic"
+            alt="Modena logotype: Modern.Timeless.Chic"
             className="w-full object-contain"
             style={{ maxWidth: 620, mixBlendMode: "multiply" }}
           />
@@ -295,7 +295,7 @@ const Modena = () => (
       className="grid grid-cols-1 lg:grid-cols-12"
       style={{ borderTop: `1px solid ${STONE}` }}
     >
-      {/* Tag image — large, bleeds */}
+      {/* Tag image: large, bleeds */}
       <motion.div
         className="lg:col-span-7 overflow-hidden"
         style={{ minHeight: "clamp(400px, 52vw, 700px)" }}
@@ -342,7 +342,7 @@ const Modena = () => (
             }}
           >
             The garment tag is the first tangible expression of the brand in a
-            customer's hands — a square of embossed olive stock, the logotype
+            customer's hands: a square of embossed olive stock, the logotype
             centred in white, and nothing else. No noise. Just the mark.
           </p>
           <div

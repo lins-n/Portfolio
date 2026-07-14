@@ -133,13 +133,13 @@ const PrivacyPolicy = () => (
         </P>
         <ul className="space-y-2 pl-4" style={{ listStyle: "disc", color: "#666" }}>
           <li className="font-grotesk text-[#666] leading-relaxed" style={{ fontWeight: 300, fontSize: "0.95rem" }}>
-            <strong style={{ color: "#ebebeb", fontWeight: 500 }}>Firebase (Google)</strong> — authentication, real-time database, and push notifications. Governed by Google's Privacy Policy.
+            <strong style={{ color: "#ebebeb", fontWeight: 500 }}>Firebase (Google):</strong> authentication, real-time database, and push notifications. Governed by Google's Privacy Policy.
           </li>
           <li className="font-grotesk text-[#666] leading-relaxed" style={{ fontWeight: 300, fontSize: "0.95rem" }}>
-            <strong style={{ color: "#ebebeb", fontWeight: 500 }}>Cloudinary</strong> — photo storage and delivery. Governed by Cloudinary's Privacy Policy.
+            <strong style={{ color: "#ebebeb", fontWeight: 500 }}>Cloudinary:</strong> photo storage and delivery. Governed by Cloudinary's Privacy Policy.
           </li>
           <li className="font-grotesk text-[#666] leading-relaxed" style={{ fontWeight: 300, fontSize: "0.95rem" }}>
-            <strong style={{ color: "#ebebeb", fontWeight: 500 }}>Expo (Expo Inc.)</strong> — mobile app framework and over-the-air updates. Governed by Expo's Privacy Policy.
+            <strong style={{ color: "#ebebeb", fontWeight: 500 }}>Expo (Expo Inc.):</strong> mobile app framework and over-the-air updates. Governed by Expo's Privacy Policy.
           </li>
         </ul>
       </Section>

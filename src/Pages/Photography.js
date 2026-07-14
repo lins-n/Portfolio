@@ -209,7 +209,7 @@ const Photography = () => {
                   className="font-grotesk leading-relaxed"
                   style={{ color: "#666", fontWeight: 300, fontSize: "clamp(0.95rem, 1.3vw, 1.05rem)", lineHeight: 1.75 }}
                 >
-                  Photography is how I slow down. I don't go looking for the shot —
+                  Photography is how I slow down. I don't go looking for the shot.
                   I just keep my eyes open and reach for my phone when something stops me.
                   Streets, light, texture, quiet moments. Everything here is straight from my Samsung,
                   unplanned and mostly unpretentious.
@@ -276,7 +276,7 @@ const Photography = () => {
                 whileHover={{ borderColor: "#6757d4", color: "#ebebeb" }}
                 transition={{ duration: 0.15 }}
               >
-                Load More — {ALL_PHOTOS.length - visible} remaining
+                Load More ({ALL_PHOTOS.length - visible} remaining)
               </motion.button>
             </motion.div>
           )}

@@ -129,7 +129,7 @@ const Bitsy = () => (
             Case Study
           </p>
           <p className="font-grotesk" style={{ color: "#ebebeb", fontWeight: 600, fontSize: "1.05rem" }}>
-            Bitsy — Full Case Study
+            Bitsy: Full Case Study
           </p>
           <p className="font-grotesk mt-1" style={{ color: "#555", fontWeight: 300, fontSize: "0.88rem" }}>
             Process, decisions, and outcomes in detail.

@@ -14,7 +14,7 @@ const Eye = ({ cx, cy }) => (
   <g>
     {/* cream surround */}
     <circle cx={cx} cy={cy} r={22} fill="#fff3e0" />
-    {/* pupil — blinks */}
+    {/* pupil, blinks */}
     <motion.g
       style={{ originX: `${cx}px`, originY: `${cy + 3}px` }}
       animate={{ scaleY: [1, 1, 0.05, 1, 1] }}
@@ -70,7 +70,7 @@ const MascotSVG = () => (
     {/* pink tongue */}
     <ellipse cx="100" cy="132" rx="16" ry="9" fill="#f87171" />
 
-    {/* ── LEFT ARM — thumb up (waving) ── */}
+    {/* LEFT ARM: thumb up (waving) */}
     <motion.g
       animate={{ rotate: [-6, 6, -6] }}
       transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -85,7 +85,7 @@ const MascotSVG = () => (
       <ellipse cx="-8.5" cy="73" rx="5.5" ry="5" fill="#6b5dd3" />
     </motion.g>
 
-    {/* ── RIGHT ARM — open palm ── */}
+    {/* RIGHT ARM: open palm */}
     <motion.g
       animate={{ rotate: [5, -5, 5] }}
       transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}

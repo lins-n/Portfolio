@@ -9,7 +9,7 @@ const experiences = [
     category: "Product Development",
     year: "2026–Present",
     description:
-      "Building a social photo app centered around daily color-themed submissions and a Day-In-The-Life activity feature. Handling end-to-end mobile development — architecture, real-time Firestore sync, image upload pipelines via Cloudinary, and push notification flows.",
+      "Building a social photo app centered around daily color-themed submissions and a Day-In-The-Life activity feature. Handling end-to-end mobile development, including architecture, real-time Firestore sync, image upload pipelines via Cloudinary, and push notification flows.",
     tags: ["React Native", "Expo", "Firebase", "Cloudinary"],
   },
   {
@@ -29,7 +29,7 @@ const experiences = [
     category: "Design + Development",
     year: "2023",
     description:
-      "Developed user interfaces across multiple products — from initial wireframing through to high-fidelity prototypes. Collaborated closely with cross-functional teams to ensure design consistency, ran usability tests, and iterated on feedback to refine the overall product experience.",
+      "Developed user interfaces across multiple products, from initial wireframing through to high-fidelity prototypes. Collaborated closely with cross-functional teams to ensure design consistency, ran usability tests, and iterated on feedback to refine the overall product experience.",
     tags: ["Figma", "React", "Prototyping"],
   },
   {
@@ -39,7 +39,7 @@ const experiences = [
     category: "Brand + Marketing",
     year: "2021–Present",
     description:
-      "Ongoing engagement with a UK-based company specialising in marketing solutions for construction firms. Currently working in an IT capacity — built and managed over 10+ client websites on WordPress, alongside producing logos, social media posts, brochures, and banners aligned to each client's brand.",
+      "Ongoing engagement with a UK-based company specialising in marketing solutions for construction firms. Currently working in an IT capacity, having built and managed over 10+ client websites on WordPress, alongside producing logos, social media posts, brochures, and banners aligned to each client's brand.",
     tags: ["WordPress", "Illustrator", "Figma", "Branding", "Print"],
   },
   {
