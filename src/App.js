@@ -14,6 +14,8 @@ const ItFits        = lazy(() => import("./Pages/ItFits"));
 const Rendells      = lazy(() => import("./Pages/Rendells"));
 const Baron         = lazy(() => import("./Pages/Baron"));
 const Modena        = lazy(() => import("./Pages/Modena"));
+const PrivacyPolicy = lazy(() => import("./Pages/PrivacyPolicy"));
+const Terms         = lazy(() => import("./Pages/Terms"));
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
           <Route path="ui/rendells"      element={<Rendells />} />
           <Route path="ui/bitsy"          element={<Bitsy />} />
           <Route path="/design/modena"   element={<Modena />} />
+          <Route path="/privacy-policy"  element={<PrivacyPolicy />} />
+          <Route path="/terms"           element={<Terms />} />
         </Routes>
       </Suspense>
     </Router>

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const V2Footer = () => {
   return (
@@ -119,13 +120,18 @@ const V2Footer = () => {
         className="border-t"
         style={{ borderColor: "rgba(255,255,255,0.06)" }}
       >
-        <div className="v2-section py-5 flex justify-between items-center">
+        <div className="v2-section py-5 flex flex-wrap justify-between items-center gap-4">
           <p className="font-mono text-[10px] text-[#333] uppercase tracking-[0.18em]">
-            Collins Nudekor 2025
+            Collins Nudekor 2026
           </p>
-          <p className="font-mono text-[10px] text-[#333] uppercase tracking-[0.18em]">
-            Design + Development
-          </p>
+          <div className="flex items-center gap-6">
+            <Link to="/privacy-policy" className="font-mono text-[10px] text-[#333] uppercase tracking-[0.18em] hover:text-[#555] transition-colors duration-200">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="font-mono text-[10px] text-[#333] uppercase tracking-[0.18em] hover:text-[#555] transition-colors duration-200">
+              Terms
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
