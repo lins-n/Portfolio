@@ -48,6 +48,19 @@ const ALL_PHOTOS = [
   "Piktr18_081039.jpeg",
   "GrainCamera_Piktr13-175037.jpeg",
   "Piktr26_150657.jpeg",
+  "Piktr610_182207.jpeg",
+  "Piktr607_202245.jpeg",
+  "Piktr529_224615.jpeg",
+  "Piktr529_180851.jpeg",
+  "Piktr529_060501.jpeg",
+  "Piktr529_060206.jpeg",
+  "Piktr517_092414.jpeg",
+  "Piktr517_085951.jpeg",
+  "Piktr512_092204.jpeg",
+  "Piktr509_143449.jpeg",
+  "Piktr509_143445.jpeg",
+  "Piktr421_164251.jpeg",
+  "Piktr421_164034.jpeg",
 ].map((f) => `/archives/${f}`);
 
 const BATCH = 9;
