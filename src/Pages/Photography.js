@@ -61,7 +61,9 @@ const ALL_PHOTOS = [
   "Piktr509_143445.jpeg",
   "Piktr421_164251.jpeg",
   "Piktr421_164034.jpeg",
-].map((f) => `/archives/${f}`);
+]
+  .map((f) => `/archives/${f}`)
+  .reverse();
 
 const BATCH = 9;
 
