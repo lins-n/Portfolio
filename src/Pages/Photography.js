@@ -67,6 +67,26 @@ const ALL_PHOTOS = [
 
 const BATCH = 9;
 
+const getColumnCount = () => {
+  if (typeof window === "undefined") return 4;
+  const w = window.innerWidth;
+  if (w >= 1024) return 4;
+  if (w >= 768) return 3;
+  return 2;
+};
+
+const useColumnCount = () => {
+  const [count, setCount] = useState(getColumnCount);
+
+  useEffect(() => {
+    const onResize = () => setCount(getColumnCount());
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  return count;
+};
+
 const slideVariants = {
   enter: (dir) => ({ x: dir >= 0 ? "55%" : "-55%", opacity: 0 }),
   center: { x: 0, opacity: 1 },
@@ -275,6 +295,7 @@ const Lightbox = ({ photos, index, onClose, onPrev, onNext, onJump }) => {
 const Photography = () => {
   const [visible, setVisible] = useState(BATCH);
   const [lightbox, setLightbox] = useState(null);
+  const columnCount = useColumnCount();
 
   const goPrev = useCallback(
     () => setLightbox((i) => (i === 0 ? ALL_PHOTOS.length - 1 : i - 1)),
@@ -287,6 +308,11 @@ const Photography = () => {
 
   const shown = ALL_PHOTOS.slice(0, visible);
   const hasMore = visible < ALL_PHOTOS.length;
+
+  const columns = Array.from({ length: columnCount }, () => []);
+  shown.forEach((src, i) => {
+    columns[i % columnCount].push({ src, i });
+  });
 
   return (
     <>
@@ -361,56 +387,60 @@ const Photography = () => {
 
         {/* Grid */}
         <section className="v2-section py-16 pb-24">
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-2.5">
-            {shown.map((src, i) => (
-              <motion.div
-                key={src}
-                className="break-inside-avoid mb-2.5 overflow-hidden group cursor-pointer"
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.55,
-                  delay: (i % BATCH) * 0.035,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                viewport={{ once: true }}
-                onClick={() => setLightbox(i)}
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={src}
-                    alt={`Archive ${i + 1}`}
-                    className="w-full block transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                    loading="lazy"
-                  />
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                    style={{ background: "rgba(12,12,12,0.35)" }}
+          <div className="flex gap-2.5">
+            {columns.map((column, colIdx) => (
+              <div key={colIdx} className="flex-1 flex flex-col gap-2.5 min-w-0">
+                {column.map(({ src, i }) => (
+                  <motion.div
+                    key={src}
+                    className="overflow-hidden group cursor-pointer"
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.55,
+                      delay: (i % BATCH) * 0.035,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
+                    viewport={{ once: true }}
+                    onClick={() => setLightbox(i)}
                   >
-                    <span
-                      className="flex items-center justify-center w-9 h-9 border"
-                      style={{
-                        borderColor: "rgba(255,255,255,0.6)",
-                        color: "#fff",
-                      }}
-                    >
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={src}
+                        alt={`Archive ${i + 1}`}
+                        className="w-full block transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                        loading="lazy"
+                      />
+                      <div
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                        style={{ background: "rgba(12,12,12,0.35)" }}
                       >
-                        <path
-                          d="M1 1h10v10M1 11L11 1"
-                          stroke="currentColor"
-                          strokeWidth="1.4"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </motion.div>
+                        <span
+                          className="flex items-center justify-center w-9 h-9 border"
+                          style={{
+                            borderColor: "rgba(255,255,255,0.6)",
+                            color: "#fff",
+                          }}
+                        >
+                          <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                          >
+                            <path
+                              d="M1 1h10v10M1 11L11 1"
+                              stroke="currentColor"
+                              strokeWidth="1.4"
+                              strokeLinecap="round"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             ))}
           </div>
 

@@ -16,54 +16,58 @@ import img14 from "./images/img14.png";
 import img15 from "./images/img15.png";
 import img16 from "./images/img16.png";
 
+const logoImgClass = "max-h-full max-w-full object-contain";
+const logoBoxClass =
+  "bg-secondary-bg/70 p-5 m-2 h-16 w-[90px] flex items-center justify-center overflow-hidden";
+
 const logos = [
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img10} />
+  <div className={logoBoxClass}>
+    <img src={img10} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img2} />
+  <div className={logoBoxClass}>
+    <img src={img2} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img5} />
+  <div className={logoBoxClass}>
+    <img src={img5} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img12} />
+  <div className={logoBoxClass}>
+    <img src={img12} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img5} />
+  <div className={logoBoxClass}>
+    <img src={img5} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img7} />
+  <div className={logoBoxClass}>
+    <img src={img7} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img11} />
+  <div className={logoBoxClass}>
+    <img src={img11} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img2} />
+  <div className={logoBoxClass}>
+    <img src={img2} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img10} />
+  <div className={logoBoxClass}>
+    <img src={img10} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img11} />
+  <div className={logoBoxClass}>
+    <img src={img11} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img12} />
+  <div className={logoBoxClass}>
+    <img src={img12} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img6} />
+  <div className={logoBoxClass}>
+    <img src={img6} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img14} />
+  <div className={logoBoxClass}>
+    <img src={img14} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img7} />
+  <div className={logoBoxClass}>
+    <img src={img7} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={img2} />
+  <div className={logoBoxClass}>
+    <img src={img2} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
-  <div className="bg-secondary-bg/70 p-5 m-2">
-    <img src={astron} />
+  <div className={logoBoxClass}>
+    <img src={astron} className={logoImgClass} loading="eager" decoding="async" />
   </div>,
 ];
 
