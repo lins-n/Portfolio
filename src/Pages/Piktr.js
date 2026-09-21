@@ -2,11 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import CaseStudyShell from "../v2/CaseStudyShell";
 import piktrIcon from "../images/piktr-icon.png";
-import screen1 from "../images/piktr-screen1.jpg";
-import screen2 from "../images/piktr-screen2.jpg";
-import screen3 from "../images/piktr-screen3.jpg";
-import screen4 from "../images/piktr-screen4.jpg";
-import screen5 from "../images/piktr-screen5.jpg";
+import screen1 from "../images/piktr/1.jpg";
+import screen2 from "../images/piktr/2.jpg";
+import screen3 from "../images/piktr/3.jpg";
+import screen4 from "../images/piktr/4.jpg";
+import screen5 from "../images/piktr/5.jpg";
+import screen6 from "../images/piktr/6.jpg";
 
 /* Layout: EXPO LAUNCH
    Full-viewport purple hero (slide aesthetic), dark v2 body.
@@ -239,11 +240,12 @@ const Piktr = () => (
         }}
       >
         {[
-          { src: screen1, alt: "Home: Your Colour for Today" },
-          { src: screen2, alt: "Home: Friends' shots feed" },
-          { src: screen3, alt: "Activities: Colour Hunt and DITL" },
-          { src: screen4, alt: "Day in the Life: hourly timeline" },
-          { src: screen5, alt: "Gallery: photo submissions by date" },
+          { src: screen1, alt: "A new colour, every single day" },
+          { src: screen2, alt: "Start a challenge with your friends" },
+          { src: screen3, alt: "Race friends to find the same colour" },
+          { src: screen4, alt: "Keep your streak alive" },
+          { src: screen5, alt: "See what your friends caught today" },
+          { src: screen6, alt: "Check in together, all day long" },
         ].map((s, i) => (
           <motion.div
             key={i}
