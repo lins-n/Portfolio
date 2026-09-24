@@ -130,7 +130,7 @@ const Piktr = () => (
               { label: "Role", value: "Mobile Developer" },
               { label: "Stack", value: "React Native · Expo" },
               { label: "Backend", value: "Firebase · Cloudinary" },
-              { label: "Status", value: "In Development" },
+              { label: "Status", value: "Live on App Store" },
             ].map((item) => (
               <div key={item.label} className="pb-3" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
                 <p className="font-mono text-[9px] uppercase tracking-[0.18em] mb-1" style={{ color: "#444" }}>
@@ -270,7 +270,7 @@ const Piktr = () => (
       </div>
     </section>
 
-    {/* WAITLIST */}
+    {/* APP STORE */}
     <section
       className="v2-section py-24 lg:py-32"
       style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
@@ -281,21 +281,21 @@ const Piktr = () => (
       >
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] mb-5" style={{ color: "#6757d4" }}>
-            Early Access
+            Available Now
           </p>
           <h2
             className="font-jaune leading-none"
             style={{ fontSize: "clamp(3rem, 8vw, 7rem)", color: "#ebebeb", letterSpacing: "-0.01em" }}
           >
-            Join the<br />waitlist.
+            Live on the<br />App Store.
           </h2>
           <p className="font-grotesk mt-6 max-w-[38ch] leading-relaxed" style={{ color: "#555", fontWeight: 300, fontSize: "0.95rem" }}>
-            Piktr is in development. Sign up to be among the first to get access when we launch.
+            Piktr is now available to download on iOS. Search "Piktr" in the App Store or use the button to get it.
           </p>
         </div>
 
         <motion.a
-          href="https://waitlister.me/p/piktr?timestamp=1783678422719"
+          href="https://apps.apple.com/app/piktr/id6797926577"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 px-8 py-4 font-mono text-[11px] uppercase tracking-[0.2em] shrink-0"
@@ -303,7 +303,7 @@ const Piktr = () => (
           whileHover={{ background: "#5646c0" }}
           transition={{ duration: 0.18 }}
         >
-          Join Waitlist
+          Get on the App Store
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
